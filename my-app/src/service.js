@@ -8,7 +8,7 @@ const convertError = (response) => {
 };
 
 export const fetchLoginStatus = () => {
-    return fetch("/session", {
+    return fetch("http://localhost:5000/session", {
       method: "GET",
     })
       .catch(convertNetworkError)
@@ -16,7 +16,7 @@ export const fetchLoginStatus = () => {
   };
   
   export const postLogin = (userEmail, password) => {
-    return fetch("/session", {
+    return fetch("http://localhost:5000/session", {
       method: "POST",
       headers: new Headers({
         "content-type": "application/json",
@@ -28,7 +28,7 @@ export const fetchLoginStatus = () => {
   };
   
   export const fetchLogout = () => {
-    return fetch("/session", {
+    return fetch("http://localhost:5000/session", {
       method: "DELETE",
     })
       .catch(convertNetworkError)
