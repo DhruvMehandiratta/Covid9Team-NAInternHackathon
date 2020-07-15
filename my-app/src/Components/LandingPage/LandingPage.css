@@ -35,6 +35,16 @@
     width: 100px;
     left: 800px;
     top: -20px;
+    border: none;
+  }
+
+  .class-button:hover {
+    background-color: #af26f5;
+  }
+
+  .class-button:active {
+    background-color: #af26f5;
+    border: none;
   }
   
   .main-title {

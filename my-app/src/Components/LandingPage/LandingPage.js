@@ -13,9 +13,9 @@ const LandingPage = () => {
                         Learn how we keep your children engaged in learning and entertained during quarantine
                     </p>
                 </div>
-                <Button className="class-button">
+                <Button className="class-button" href="/learn">
                     Join Class
-          </Button>
+                </Button>
                 <img className="main-image" alt="empty" src={image} />
             </div>
         </Container>

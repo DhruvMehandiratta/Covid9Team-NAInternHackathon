@@ -1,11 +1,7 @@
 import React from 'react';
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
-// import Login from './Components/Login/Login'
 import Calendar from './Components/Calendar/Calendar'
-// import RecordedVids from '/Components/RecordedVids/RecordedVids'
-// import Teacher from '/Components/SignUp/Teacher'
-// import Parent from '/Components/SignUp/Parent'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -14,6 +10,7 @@ import {
   Route
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
+import RecordedVids from './Components/RecordedVids/RecordedVids';
 
 const App = () => {
   return (
@@ -28,7 +25,6 @@ const App = () => {
                 <Nav.Link href="/home">
                   Home
                 </Nav.Link>
-                  
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
@@ -54,15 +50,9 @@ const App = () => {
           <Route path="/calendar">
             <Calendar />
           </Route>
-          {/* <Route path="/login">
-            <Login />
+          <Route path="/videos">
+            <RecordedVids />
           </Route>
-          <Route path="/teacher/signup">
-            <Teacher />
-          </Route>
-          <Route path="/parent/signup">
-            <Parent />
-          </Route> */}
         </Switch>
 
         <div class="home-page-circle-1"></div>
