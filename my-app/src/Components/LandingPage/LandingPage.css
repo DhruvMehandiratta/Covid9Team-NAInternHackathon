@@ -6,7 +6,6 @@
     color: black;
     margin-top: 8rem;
     position: relative;
-    background-color: #FAE73E;
     left: -400px;
   }
   
@@ -24,6 +23,7 @@
     font-size: calc(10px + 2vmin);
     color: black;
     text-align: right;
+    position: absolute;
   }
   
   .class-button {
@@ -41,18 +41,17 @@
     position: relative;
     top: 200px;
     left: 200px;
-    font-size: xxx-large;
   }
   
   .main-text {
     position: relative;
-    top: 250px;
+    top: 200px;
     left: 200px;
   }
   
   .main-image {
-    width: 700px;
+    width: 500px;
     position: relative;
-    top: 50px;
-    left: 300px;
+    top: -50px;
+    left: 200px;
   }

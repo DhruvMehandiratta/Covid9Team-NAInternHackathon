@@ -3,7 +3,6 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: 110;
 }
 
 .home-navbar {
@@ -22,7 +21,6 @@
   background-color: #FFD583;
   bottom:10vw;
   left: -10vw;
-  z-index: 100;
 }
 
 .home-page-circle-2 {
@@ -33,7 +31,6 @@
   background-color: #AFE7E7;
   bottom:-15vw;
   left: 20vw;
-  z-index: 100;
 }
 
 .home-page-circle-3 {
@@ -44,5 +41,4 @@
   background-color: #C5FB7F;
   top:-25vw;
   right: -15vw;
-  z-index: 111;
 }
