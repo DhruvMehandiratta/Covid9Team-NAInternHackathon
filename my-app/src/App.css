@@ -8,6 +8,7 @@
 
 .home-navbar {
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -44,5 +45,4 @@
   background-color: #C5FB7F;
   top:-25vw;
   right: -15vw;
-  z-index: 111;
 }
