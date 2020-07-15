@@ -1,105 +1,96 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const cookieParser = require("cookie-parser");
-const { sessions, addSession, deleteSession } = require("./sessions");
-const {
-  comments,
-  addComments,
-  readComments,
-  deleteComments,
-} = require("./comments");
+const PORT = 5000;
+app.use(express.static('./public'));
 
-app.use(cookieParser());
-app.use(express.static("./build"));
-
-app.get("/session", (req, res) => {
-  const sid = req.cookies.sid;
-  if (!sid) {
-    res.status(401).json({ error: "LOGIN_REQUIRED" });
-    return;
-  }
-  if (!sessions[sid]) {
-    res.clearCookie("sid");
-    res.status(403).json({ error: "LOGIN_UNAUTHORIZED" });
-    return;
-  }
-  const username = sessions[sid].username;
-  res.status(200).json({ username: username });
-});
-
+app.get('/test',(req,res)=>{
+  const customers = [{id:1, first:"john", last:"doe"},{id:2, first:"mary", last:"lin"}];
+  res.json(customers);
+})
 //log in
+app.get("/session", (req, res) => {
+    console.log(req);
+    if (!sid) {
+      res.status(401).json({ error: "LOGIN_REQUIRED" });
+      return;
+    }
+    if (!sessions[sid]) {
+      res.clearCookie("sid");
+      res.status(403).json({ error: "LOGIN_UNAUTHORIZED" });
+      return;
+    }
+    res.status(200).json({ username: username });
+  });
+
+
 app.post("/session", express.json(), (req, res) => {
-  const { username } = req.body;
-  res.clearCookie("sid");
+  const { username,password } = req.body;
+  console.log(req.body);
   if (!username) {
     res.status(401).json({ error: "LOGIN_REQUIRED" });
-  } else if (username.toUpperCase().includes("DOG")) {
-    res.status(406).json({ error: "NOT_ACCEPTABLE" });
-  } else if (username.includes(" ")) {
-    res.status(406).json({ error: "NOT_ACCEPTABLE" });
   } else {
-    const session = addSession({ username });
-    res.cookie("sid", session.id);
-    res.status(200).json({ username: session.username });
+    res.status(200).json({ username: username });
   }
 });
 
-//logout
-app.delete("/session", (req, res) => {
-  const sid = req.cookies.sid;
-  res.clearCookie("sid");
-  deleteSession(sid);
-  res.sendStatus(200);
+app.post("/addevent", express.json(), (req, res) => {
+  const { google } = require('googleapis');
+  const { OAuth2 } = google.auth
+  const oAuth2Client = new OAuth2(
+      '40967611095-5act06qaram29h11hraf0pka92dt8pg7.apps.googleusercontent.com', 
+      '5EPUNauI7fNMDLVVUdm_gSAB'
+      )
+  oAuth2Client.setCredentials({refresh_token: 
+      '1//04bUQsojcy3W5CgYIARAAGAQSNwF-L9IrDGDJ0LLOHCz-dA2bNKGRcrku72v10gOcJdFexKOb13USm9lvLY-UHVUNDDFo8oM9M1k',
+  })
+
+  const calendar = google.calendar({version: 'v3', auth: oAuth2Client})
+  const eventStartTime = new Date()
+  eventStartTime.setDate(eventStartTime.getDate()+1)
+  const eventEndTime = new Date()
+  eventEndTime.setDate(eventStartTime.getDate()+1) //add variable from react code 
+  eventEndTime.setMinutes(eventEndTime.getMinutes()+45) //add variable from react code 
+
+  const event = {
+      summary: `XYZ Class`, //add variable from react code '${req.body.summary}' (use bodyparser)
+      location: `Zoom Link`, //add variable from react code '${req.body.zoomlink}' 
+      description: `Will teach xyz subject`, //add variable from react code '${req.body.description}'
+      colorId: 1,
+      start: {
+        dateTime: eventStartTime,
+        timeZone: 'America/New_York',
+      },
+      end: {
+        dateTime: eventEndTime,
+        timeZone: 'America/New_York',
+      },
+    }
+
+  calendar.freebusy.query(
+      {
+        resource: {
+          timeMin: eventStartTime,
+          timeMax: eventEndTime,
+          timeZone: 'America/New_York',
+          items: [{ id: 'primary' }],
+        },
+      },
+      (err, res) => {
+        if (err) return console.error('Free Busy Query Error: ', err)
+          const eventArr = res.data.calendars.primary.busy
+          if (eventArr.length === 0)
+          return calendar.events.insert(
+            { calendarId: 'primary', resource: event },
+            err => {
+              if (err) return console.error('Error Creating Calender Event:', err)
+              return console.log('Calendar event successfully created.')
+            }
+          )
+          return console.log(`Another event set during that time`)
+      }
+    )
 });
 
-//read comments
-app.get("/comments/:id", (req, res) => {
-  const sid = req.cookies.sid;
-  if (!sid || !sessions[sid]) {
-    res.status(401).json({ error: "LOGIN_REQUIRED" });
-    return;
-  }
-  const username = sessions[sid].username;
-  const commentId = req.params.id;
-  const comment = readComments(comments, username, commentId);
-  res.status(200).json({ comment: comment });
-});
-
-//add comments
-app.post("/comments", express.json(), (req, res) => {
-  const sid = req.cookies.sid;
-  if (!sid || !sessions[sid]) {
-    res.status(401).json({ error: "LOGIN_REQUIRED" });
-    return;
-  }
-
-  const commentsText = req.body.comment;
-  const commentsId = req.body.id;
-  const username = sessions[sid].username;
-
-  if (!commentsText) {
-    res.status(406).json({ error: "MESSAGE_REQUIRED" });
-    return;
-  }
-  addComments(comments, username, commentsId, commentsText);
-  res.status(200).json({ comment: commentsText });
-});
-
-//delete comments
-app.delete("/comments/:id", express.json(), (req, res) => {
-  const sid = req.cookies.sid;
-  if (!sid || !sessions[sid]) {
-    res.status(401).json({ error: "LOGIN_REQUIRED" });
-    return;
-  }
-
-  const commentsId = req.params.id;
-  const username = sessions[sid].username;
-  console.log(comments, username, commentsId);
-  deleteComments(comments, username, commentsId);
-  res.status(200).json({ ok: true });
-});
-
-app.listen(5000, () => {
-  console.log("listening at http://localhost:5000/");
-});
+app.listen(PORT, ()=>{
+  console.log(`Server running on port ${PORT}`);
+})
