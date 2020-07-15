@@ -1,15 +1,12 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import Learn from './Learn';
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Container, Navbar, Nav, Button } from 'react-bootstrap';
+import LearnMore from './Components/LearnMore/LearnMore';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
 
@@ -27,13 +24,13 @@ const App = () => {
                   Home
                 </Nav.Link>
                 <Nav.Link>
-                  Sign in
+                  Sign Up
                 </Nav.Link>
-                <Nav.Link>
+                <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
                 <Nav.Link href="/login">
-                  Log in
+                  Login
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -44,10 +41,8 @@ const App = () => {
           <Route path="/home">
             <LandingPage />
           </Route>
-          <Route path="/login">
-            <h2>
-              Hello
-            </h2>
+          <Route path="/learn">
+            <LearnMore />
           </Route>
         </Switch>
       </div>
