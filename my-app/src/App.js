@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -16,22 +16,24 @@ const App = () => {
       <div className="main-container">
         <Container>
           <Navbar bg="transparent" expant="lg">
-            <Navbar.Brand href="/home">Home School</Navbar.Brand>
+            <Navbar.Brand href="/home">VirtualEdu</Navbar.Brand>
             <Navbar.Toggle aria-controls="home-school-navbar"></Navbar.Toggle>
             <Navbar.Collapse className="home-navbar" id="home-school-navbar">
               <Nav>
                 <Nav.Link href="/home">
                   Home
                 </Nav.Link>
+                  
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
                 <Nav.Link href="/login">
                   Login
                 </Nav.Link>
-                <Nav.Link>
-                  Sign Up
-                </Nav.Link>
+                <NavDropdown title="Sign Up" renderMenuOnMount={true}>
+                    <NavDropdown.Item href="/teacher/signup">Teacher</NavDropdown.Item>
+                    <NavDropdown.Item href="/parent/signup">Parent</NavDropdown.Item>
+                  </NavDropdown>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -45,6 +47,10 @@ const App = () => {
             <LearnMore />
           </Route>
         </Switch>
+
+        <div class="home-page-circle-1"></div>
+        <div class="home-page-circle-2"></div>
+        <div class="home-page-circle-3"></div>
       </div>
     </Router>
   );
