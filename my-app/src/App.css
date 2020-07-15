@@ -5,9 +5,16 @@
   overflow: hidden;
 }
 
+.logo {
+  width: 45px;
+  height: 45px;
+  margin-right: 1rem;
+}
+
 .home-navbar {
   justify-content: flex-end;
   z-index: 1;
+  font-size: medium;
 }
 
 .dropdown:hover .dropdown-menu {
