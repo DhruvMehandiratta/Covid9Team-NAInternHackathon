@@ -9,8 +9,9 @@
 
 .learn-text {
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 100px;
+    left: -300px;
+    width: 400px;
   }  
 
   .learnContainer {
@@ -27,7 +28,8 @@
 
 .content-container {
     position: relative;
-    left: -100px;
+    left: 100px;
+    top: -300px;
 }
 
 .content-container1 {
