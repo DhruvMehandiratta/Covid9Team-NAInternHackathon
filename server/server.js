@@ -9,16 +9,16 @@ app.get('/test',(req,res)=>{
 })
 //log in
 app.get("/session", (req, res) => {
-    console.log(req);
-    if (!sid) {
-      res.status(401).json({ error: "LOGIN_REQUIRED" });
-      return;
-    }
-    if (!sessions[sid]) {
-      res.clearCookie("sid");
-      res.status(403).json({ error: "LOGIN_UNAUTHORIZED" });
-      return;
-    }
+    console.log(req.body);
+    // if (!sid) {
+    //   res.status(401).json({ error: "LOGIN_REQUIRED" });
+    //   return;
+    // }
+    // if (!sessions[sid]) {
+    //   res.clearCookie("sid");
+    //   res.status(403).json({ error: "LOGIN_UNAUTHORIZED" });
+    //   return;
+    // }
     res.status(200).json({ username: username });
   });
 

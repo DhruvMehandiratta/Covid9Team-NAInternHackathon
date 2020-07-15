@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { fetchLogin } from "./service";
+import { postLogin } from "./service";
 
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
   const [password,setPassword] = useState("")
   const performLogin = (e) => {
     e.preventDefault();
-    fetchLogin(username,password)
+    postLogin(username,password)
       .then((userInfo) => {
         console.log(userInfo);
       })
