@@ -8,9 +8,12 @@ const LandingPage = () => {
         <Container>
             <div className="main-page">
                 <div className="header-text-container">
-                    <h1 className="main-title">Home Schooling</h1>
+                    <h1 className="main-title">Is your child learning during quarantine?</h1>
+                    <p></p>
+                    <p></p>
+                    <p></p>
                     <p className="main-text">
-                        Learn how we keep your children engaged in learning and entertained during quarantine
+                        Learn how we keep your children engaged and entertained at home
                     </p>
                 </div>
                 <Button className="class-button">

@@ -14,6 +14,7 @@ import {
   Route
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
+import logo from '../src/assets/logo.png';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <div className="main-container">
         <Container>
           <Navbar bg="transparent" expant="lg">
+            <img className="logo" alt="empty" src={logo} />
             <Navbar.Brand href="/home">VirtualEdu</Navbar.Brand>
             <Navbar.Toggle aria-controls="home-school-navbar"></Navbar.Toggle>
             <Navbar.Collapse className="home-navbar" id="home-school-navbar">
