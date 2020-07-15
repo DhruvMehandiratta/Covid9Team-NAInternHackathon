@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -23,9 +23,10 @@ const App = () => {
                 <Nav.Link href="/home">
                   Home
                 </Nav.Link>
-                <Nav.Link>
-                  Sign Up
-                </Nav.Link>
+                  <NavDropdown title="Sign Up" renderMenuOnMount={true}>
+                    <NavDropdown.Item href="/teacher/signup">Teacher</NavDropdown.Item>
+                    <NavDropdown.Item href="/parent/signup">Parent</NavDropdown.Item>
+                  </NavDropdown>
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>

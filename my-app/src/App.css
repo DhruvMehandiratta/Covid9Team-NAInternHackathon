@@ -9,3 +9,9 @@
   justify-content: flex-end;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
