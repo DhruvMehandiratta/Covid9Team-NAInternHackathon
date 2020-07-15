@@ -65,11 +65,6 @@
     position: relative;
     top:-110px;
     font-size:1.5rem;
-    color: black;
-}
-
-.classroomButton:hover  {
-    color: black;
 }
 
 .playdates {
@@ -84,11 +79,6 @@
     position: relative;
     top:-110px;
     font-size:1.5rem;
-    color: black;
-}
-
-.playdatesButton:hover {
-    color: black;
 }
 
 .games {
@@ -103,11 +93,6 @@
     position: relative;
     top:-110px;
     font-size:1.5rem;
-    color: black;
-}
-
-.gamesButton:hover {
-    color:black;
 }
 
 .vids {
@@ -122,9 +107,4 @@
     position: relative;
     top:-110px;
     font-size:1.5rem;
-    color: black;
-}
-
-.vidsButton:hover {
-    color: black;
 }

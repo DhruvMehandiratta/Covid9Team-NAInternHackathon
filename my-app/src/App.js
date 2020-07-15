@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
+// import Login from './Components/Login/Login'
+import Calendar from './Components/Calendar/Calendar'
+// import RecordedVids from '/Components/RecordedVids/RecordedVids'
+// import Teacher from '/Components/SignUp/Teacher'
+// import Parent from '/Components/SignUp/Parent'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -45,6 +50,18 @@ const App = () => {
           <Route path="/learn">
             <LearnMore />
           </Route>
+          <Route path="/calendar">
+            <Calendar />
+          </Route>
+          {/* <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/teacher/signup">
+            <Teacher />
+          </Route>
+          <Route path="/parent/signup">
+            <Parent />
+          </Route> */}
         </Switch>
       </div>
     </Router>

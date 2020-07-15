@@ -1,5 +1,5 @@
 import React from 'react';
-import './LearnMore.css';
+import './Calendar.css';
 import { Container } from 'react-bootstrap';
 import classroom from '../../assets/liveClassroom.jpg';
 import playdates from '../../assets/playdate.png';
@@ -19,17 +19,17 @@ class Learn extends React.Component {
 					<div className="content-container">
 						<div className="content-container1">
 							<img className="classroom" alt="empty" src={classroom} />
-							<a className="classroomButton" href="/calendar">Live Classrooms</a>
+							<button className="classroomButton" href="/calendar">Live Classrooms</button>
 
 							<img className="playdates" alt="empty" src={playdates} />
-							<a className="playdatesButton" href="/playdates">Online Playdates</a>
+							<button className="playdatesButton">Online Playdates</button>
 						</div>
 						<div className="content-container2">
 							<img className="vids" alt="empty" src={vids} />
-							<a className="vidsButton" href="/videos">Educational Videos</a>
+							<button className="vidsButton">Educational Videos</button>
 
 							<img className="games" alt="empty" src={games} />
-							<a className="gamesButton" href="/games">Games</a>
+							<button className="gamesButton">Games</button>
 						</div>
 					</div>
 				</div>
