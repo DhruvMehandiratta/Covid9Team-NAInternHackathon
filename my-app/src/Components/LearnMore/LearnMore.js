@@ -23,6 +23,8 @@ class Learn extends React.Component {
 
 							<img className="playdates" alt="playdates" src={playdates} />
 							<a className="playdatesButton" href="/playdates">Online Playdates</a>
+
+							
 						</div>
 						<div className="content-container2">
 							<img className="vids" alt="videos" src={vids} />

@@ -22,6 +22,7 @@
   background-color: #FFD583;
   bottom:10vw;
   left: -10vw;
+  pointer-events: none;
 }
 
 .home-page-circle-2 {
@@ -31,6 +32,7 @@
   height: 35vw;
   bottom: 0;
   left: 20vw;
+  pointer-events: none;
 }
 
 .home-page-circle-2::before {
@@ -50,7 +52,7 @@
   height: 40vw;
   top:0;
   right:0;
-  
+  pointer-events: none;
 }
 
 .home-page-circle-3::before {
