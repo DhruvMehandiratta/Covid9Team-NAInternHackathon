@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const PORT = 5000;
+const bodyParser = require('body-parser')
+
 app.use(express.static('./public'));
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 
 app.get('/test',(req,res)=>{
   const customers = [{id:1, first:"john", last:"doe"},{id:2, first:"mary", last:"lin"}];
@@ -45,16 +49,24 @@ app.post("/addevent", express.json(), (req, res) => {
   })
 
   const calendar = google.calendar({version: 'v3', auth: oAuth2Client})
+  var eventdate = req.body.event_date //yyyy-mm-dd
+  var str_st_time = req.body.event_start_time //00:00:00
+  var st_time = parseInt(str_st_time, 10)
+  var str_end_time = req.body.event_end_time
+  var end_time = parseInt(str_st_time, 10)
+  var eventtime = end_time - st_time
+
   const eventStartTime = new Date()
-  eventStartTime.setDate(eventStartTime.getDate()+1)
+  eventStartTime.setDate(eventdate)
   const eventEndTime = new Date()
-  eventEndTime.setDate(eventStartTime.getDate()+1) //add variable from react code 
-  eventEndTime.setMinutes(eventEndTime.getMinutes()+45) //add variable from react code 
+  eventEndTime.setDate(eventdate) //add variable from react code 
+  eventEndTime.setMinutes((str_end_time).getMinutes()+ eventtime) //add variable from react code 
+
 
   const event = {
-      summary: `XYZ Class`, //add variable from react code '${req.body.summary}' (use bodyparser)
+      summary: '${req.body.event_desc}' , //add variable from react code '${req.body.summary}' (use bodyparser)
       location: `Zoom Link`, //add variable from react code '${req.body.zoomlink}' 
-      description: `Will teach xyz subject`, //add variable from react code '${req.body.description}'
+      description: `Will have a fun and engaging session with children!`, //add variable from react code '${req.body.description}'
       colorId: 1,
       start: {
         dateTime: eventStartTime,
