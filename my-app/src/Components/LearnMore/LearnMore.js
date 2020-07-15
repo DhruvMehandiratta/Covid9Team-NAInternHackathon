@@ -18,17 +18,17 @@ class Learn extends React.Component {
 					</div>
 					<div className="content-container">
 						<div className="content-container1">
-							<img className="classroom" alt="empty" src={classroom} />
+							<img className="classroom" alt="classroom" src={classroom} />
 							<a className="classroomButton" href="/calendar">Live Classrooms</a>
 
-							<img className="playdates" alt="empty" src={playdates} />
+							<img className="playdates" alt="playdates" src={playdates} />
 							<a className="playdatesButton" href="/playdates">Online Playdates</a>
 						</div>
 						<div className="content-container2">
-							<img className="vids" alt="empty" src={vids} />
+							<img className="vids" alt="videos" src={vids} />
 							<a className="vidsButton" href="/videos">Educational Videos</a>
 
-							<img className="games" alt="empty" src={games} />
+							<img className="games" alt="games" src={games} />
 							<a className="gamesButton" href="/games">Games</a>
 						</div>
 					</div>
