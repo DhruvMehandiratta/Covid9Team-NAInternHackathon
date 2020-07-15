@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useContext } from "react";
+import { fetchLogin } from "./service";
+
 import './App.css';
 
 function App() {
+  const [username, setUsername] = useState("");
+  const [password,setPassword] = useState("")
+  const performLogin = (e) => {
+    e.preventDefault();
+    fetchLogin(username,password)
+      .then((userInfo) => {
+        console.log(userInfo);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="login">
+      <form onSubmit={(e)=>performLogin(e)}>
+        <input onChange={(e)=>{setUsername(e.target.value)}}/>
+        <input onChange={(e)=>{setPassword(e.target.value)}}/>
+         <button type="submit" disabled={!username}>
+            Login
+          </button>
+      </form>
     </div>
   );
 }
