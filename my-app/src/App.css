@@ -17,6 +17,19 @@
   font-size: medium;
 }
 
+.dropdown .dropdown-menu {
+  background-color: #c6fb7f;
+  border: none;
+}
+
+.dropdown .dropdown-item {
+  padding-bottom: 20px;
+}
+
+.dropdown .dropdown-item:hover {
+  background-color: #a6f33f;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
