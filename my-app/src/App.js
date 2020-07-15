@@ -23,14 +23,14 @@ const App = () => {
                 <Nav.Link href="/home">
                   Home
                 </Nav.Link>
-                <Nav.Link>
-                  Sign Up
-                </Nav.Link>
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
                 <Nav.Link href="/login">
                   Login
+                </Nav.Link>
+                <Nav.Link>
+                  Sign Up
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
