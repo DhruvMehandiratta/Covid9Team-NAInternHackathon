@@ -26,20 +26,39 @@
 
 .home-page-circle-2 {
   position: absolute;
-  width: 30vw;
-  height: 30vw;
-  border-radius: 50%;
-  background-color: #AFE7E7;
-  bottom:-15vw;
+  overflow: hidden;
+  width: 35vw;
+  height: 35vw;
+  bottom: 0;
   left: 20vw;
+}
+
+.home-page-circle-2::before {
+  content: '';
+  transform: translate(0%, 60%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius:50%;
+  background-color: #AFE7E7;
 }
 
 .home-page-circle-3 {
   position: absolute;
+  overflow: hidden;
   width: 40vw;
   height: 40vw;
-  border-radius: 50%;
+  top:0;
+  right:0;
+  
+}
+
+.home-page-circle-3::before {
+  content: '';
+  transform: translate(30%, -60%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius:50%;
   background-color: #C5FB7F;
-  top:-25vw;
-  right: -15vw;
 }

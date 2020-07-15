@@ -23,7 +23,7 @@
     font-size: calc(10px + 2vmin);
     color: black;
     text-align: right;
-    position: absolute;
+    position: relative;
   }
   
   .class-button {
@@ -54,4 +54,5 @@
     position: relative;
     top: -50px;
     left: 200px;
+    z-index: 1;
   }
