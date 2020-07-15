@@ -26,11 +26,3 @@
     padding-bottom:50px;
     z-index: 1;
 }
-
-.calendar {
-    border:solid 1px #777;
-    width: 1000;
-    height: 600;
-    position: relative;
-    left: 200px;
-}
