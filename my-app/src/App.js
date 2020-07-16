@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useContext } from "react";
+import { loginAsTeacher } from "./service";
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
 import Calendar from './Components/Calendar/Calendar'
@@ -20,6 +21,30 @@ import LiveStream from './Components/LiveStream/LiveStream';
 import Playdates from './Components/Playdates/Playdates';
 import logo from '../src/assets/logo.png';
 
+// function App() {
+//   const [username, setUsername] = useState("");
+//   const [password, setPassword] = useState("")
+//   const performLogin = (e) => {
+//     e.preventDefault();
+//     loginAsTeacher(username, password)
+//       .then((userInfo) => {
+//         console.log(userInfo);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//   };
+
+//   return (
+//     <div className="login">
+//       <form onSubmit={(e) => performLogin(e)}>
+//         <input onChange={(e) => { setUsername(e.target.value) }} />
+//         <input onChange={(e) => { setPassword(e.target.value) }} />
+//         <button type="submit" disabled={!username}>
+//           Login
+//           </button>
+//       </form>
+//     </div>
 
 
  const App = () => {
