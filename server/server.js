@@ -34,9 +34,9 @@ app.post('/register/student', express.json(), async (req, res) => {
 })
 //log in as a teacher
 app.post("/login/teacher", express.json(), async (req, res) => {
-  const { email, name, phone } = req.body;
+  const { email } = req.body;
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  const info = { email: email, name: name, phone: phone, password: hashedPassword };
+  const info = { email: email, password: hashedPassword };
   try {
     await loginTeacher(info)
     res.status(200).json({ message: "Teacher successfully logged in" });
@@ -47,9 +47,9 @@ app.post("/login/teacher", express.json(), async (req, res) => {
 
 //log in as a student
 app.post("/login/student", express.json(), async (req, res) => {
-  const { email, parent_name, child_name, phone } = req.body;
+  const { email } = req.body;
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  const info = { email: email, parent_name: parent_name, child_name: child_name, phone: phone, password: hashedPassword };
+  const info = { email: email, password: hashedPassword };
   try {
     await loginStudent(info)
     res.status(200).json({ message: "Student successfully logged in" });
