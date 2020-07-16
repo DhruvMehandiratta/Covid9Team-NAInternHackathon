@@ -23,12 +23,18 @@ Live Peer to Peer video streaming, Playdates, Events Signup, Teacher and Parents
 ### Technologies used
 HTML, CSS, React.js, IBM Cloud (Cloundant), Google Calendar API, Simple Peer (for peer to peer live streaming via RTC).
 
+### Steps to run locally
+1. open 4 terminals
+2. cd my-app, npm install, npm start
+3. cd my-app/server, npm install, npm start
+4. cd my-app/second-server,  npm install, npm start
+5. cd my-app/stream,  npm install, npm start
 
 ### Main directories
-src: contains the code files, assets, stream and server.
-stream: contains the work for peer to peer live videos.
-server: contains the backend part implemented using IBM Cloud.
-second-server: contains calendar api backend.
+<br> src: contains the code files, assets, stream and server. </br>
+<br>stream: contains the work for peer to peer live videos.</br>
+<br>server: contains the backend part implemented using IBM Cloud.</br>
+<br>second-server: contains calendar api backend.</br>
 
 ### Future
 In the future, we will set up the server on the cloud to help it scale. As more teachers join, we will have more interactive classes to choose from.
