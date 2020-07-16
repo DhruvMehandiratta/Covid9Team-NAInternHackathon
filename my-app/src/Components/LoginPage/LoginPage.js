@@ -41,7 +41,7 @@ const LoginPage = () => {
         <Container>
             <div className="login-page">
                 <div className="loginLayout">
-                    <form onSubmit={(e) => performLogin(e)}>
+                    <form className="formLayout" onSubmit={(e) => performLogin(e)}>
                         <label className="labelLayout">Email:</label> <br /><br />
                         <input onChange={(e) => setEmail(e.target.value)}
                         className="inputLayout" type="text" id="login_email"></input><br /><br />
