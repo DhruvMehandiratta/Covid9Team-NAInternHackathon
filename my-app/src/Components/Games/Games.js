@@ -9,6 +9,9 @@ import image3 from '../../assets/story.png';
 import image4 from '../../assets/story2.png';
 import image5 from '../../assets/dino2.png';
 import image6 from '../../assets/strategy2.png';
+import image7 from '../../assets/strategy3.png';
+import image8 from '../../assets/story3.png';
+import image9 from '../../assets/dino3.png';
 
 class Games extends React.Component {
 	render() {
@@ -41,6 +44,9 @@ class Games extends React.Component {
                                 <img className="games-image" alt="empty" src={image4} />
                                 <img className="games-image" alt="empty" src={image5} />
                                 <img className="games-image" alt="empty" src={image6} />
+                                <img className="games-image" alt="empty" src={image7} />
+                                <img className="games-image" alt="empty" src={image8} />
+                                <img className="games-image" alt="empty" src={image9} />
                             </div>
                         </div>
                     </div>
