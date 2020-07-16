@@ -8,7 +8,7 @@ To solve this issue, we have built a platform which keeps children engaged in le
 It is different and better than the existing websites because it provides a single platform where children and teachers can signup. Teachers can take one on one sessions with children. Teachers and Parents can also meet via the live streaming platform to give feedbacks about the children. It also allows to make match between children. We know that children like to spend time with the ones of their age. So, using our platform, the children get matched to other children via the Playdates feature. Children can also play games and watch recorded videos.
 
 Main functionalies of our product: Live Peer to Peer video streaming, Playdates, Events Signup, Teacher and Parents Signup, Games, recorded learning and fun videos streaming.
-
+<img src='./home_page.png'/>
 
 Technologies used: HTML, CSS, React.js, IBM Cloud (Cloundant), Google Calendar API, Simple Peer (for peer to peer live streaming via RTC).
 
