@@ -26,7 +26,7 @@ function TeacherSignUp() {
                 zIndex: "1",
                 top: 0, left: 0, width: "50%"
             }}>
-                <label style={{ marginLeft: "200px", marginTop: "300px", fontFamily: "Poppins", fontSize: "35px" }}>Sign Up as a Teacher today! <br></br></label>
+                <label style={{ marginLeft: "200px", marginTop: "300px", fontFamily: "Poppins", fontSize: "35px" }}>Sign up as a teacher today! <br></br></label>
                 <img style={{ width: "700px", marginTop: "200px", marginLeft: "100px" }} alt="empty" src={image} />
                 <img style={{ width: "100px", marginTop: "10px", marginLeft: "25px" }} alt="empty" src={logo} />
             </div>
