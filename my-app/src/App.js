@@ -16,7 +16,6 @@ import TeacherSignUp from './Components/SignUp/TeacherSignUp'
 import EventSignUp from './Components/SignUp/EventSignUp'
 import RecordedVids from './Components/RecordedVids/RecordedVids';
 import Games from './Components/Games/Games';
-import LiveStream from './Components/LiveStream/LiveStream';
 import Playdates from './Components/Playdates/Playdates';
 import logo from '../src/assets/logo.png';
 
@@ -78,13 +77,10 @@ const App = () => {
           <Route path="/games">
             <Games />
           </Route>
-          <Route path="/stream">
-            <LiveStream />
-          </Route>
           <Route path="/playdates">
             <Playdates />
           </Route>
-          <Route path="/addevent">
+          <Route path="/event">
             <EventSignUp />
           </Route>
         </Switch>

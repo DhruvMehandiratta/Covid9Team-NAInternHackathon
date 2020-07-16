@@ -26,3 +26,24 @@
     padding-bottom:50px;
     z-index: 1;
 }
+
+.connectButton {
+    color: white !important;
+    background-color: #b959ea !important;
+    position: relative;
+    border-radius: 10px;
+    left: -200px;
+    top: 200px;
+    height: 42px;
+    width: 134px;
+    border: none !important;
+}
+
+.connectButton:hover {
+  background-color: #af26f5 !important;
+}
+
+.connectButton:active {
+  background-color: #af26f5 !important;
+  border: none !important;
+}

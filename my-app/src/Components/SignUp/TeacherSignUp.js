@@ -39,7 +39,7 @@ function TeacherSignUp() {
                     <label className="teacherLabel" >Password:</label><br /><br />
                     <input onChange={(e) => setPassword(e.target.value)}
                         className="teacherInput" type="password" id="teacher_password"></input><br /><br /><br />
-                    <button className="teacherButton" type="submit" id="teacher_signup_button">Sign Up</button>
+                    <button className="teacherButton" href="/addevent" type="submit" id="teacher_signup_button">Sign Up</button>
                 </form>
                 <p className="signUpStatus">{signUpStatus}</p>
             </div>
