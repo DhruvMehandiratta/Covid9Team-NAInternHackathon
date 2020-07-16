@@ -18,34 +18,9 @@ import TeacherSignUp from './Components/SignUp/TeacherSignUp'
 import RecordedVids from './Components/RecordedVids/RecordedVids';
 import logo from '../src/assets/logo.png';
 
-// function App() {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("")
-//   const performLogin = (e) => {
-//     e.preventDefault();
-//     loginAsTeacher(username, password)
-//       .then((userInfo) => {
-//         console.log(userInfo);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   };
 
-//   return (
-//     <div className="login">
-//       <form onSubmit={(e) => performLogin(e)}>
-//         <input onChange={(e) => { setUsername(e.target.value) }} />
-//         <input onChange={(e) => { setPassword(e.target.value) }} />
-//         <button type="submit" disabled={!username}>
-//           Login
-//           </button>
-//       </form>
-//     </div>
-
-
- const App = () => {
-   return (
+const App = () => {
+  return (
     <Router>
       <div className="main-container">
         <Container>
@@ -65,9 +40,9 @@ import logo from '../src/assets/logo.png';
                   Login
                 </Nav.Link>
                 <NavDropdown title="Sign Up" renderMenuOnMount={true}>
-                    <NavDropdown.Item href="/teacher/signup">Teacher</NavDropdown.Item>
-                    <NavDropdown.Item href="/parent/signup">Parent</NavDropdown.Item>
-                  </NavDropdown>
+                  <NavDropdown.Item href="/teacher/signup">Teacher</NavDropdown.Item>
+                  <NavDropdown.Item href="/parent/signup">Parent</NavDropdown.Item>
+                </NavDropdown>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -81,16 +56,16 @@ import logo from '../src/assets/logo.png';
             <LearnMore />
           </Route>
           <Route path="/loginpage">
-            <LoginPage/>
+            <LoginPage />
           </Route>
           <Route path="/parent/signup">
-            <StudentsSignUp/>
+            <StudentsSignUp />
           </Route>
           <Route path="/teacher/signup">
-            <TeacherSignUp/>
+            <TeacherSignUp />
           </Route>
           <Route path="/eventsSignUp">
-            <EventSignUp/>
+            <EventSignUp />
           </Route>
           <Route path="/calendar">
             <Calendar />
@@ -100,9 +75,9 @@ import logo from '../src/assets/logo.png';
           </Route>
         </Switch>
 
-        <div class="home-page-circle-1"></div>
-        <div class="home-page-circle-2"></div>
-        <div class="home-page-circle-3"></div>
+        <div className="home-page-circle-1"></div>
+        <div className="home-page-circle-2"></div>
+        <div className="home-page-circle-3"></div>
       </div>
     </Router>
   );
