@@ -51,7 +51,7 @@ import logo from '../src/assets/logo.png';
 
         <Switch>
           <Route path="/home">
-            <Login />
+            <LandingPage />
           </Route>
           <Route path="/learn">
             <LearnMore />
