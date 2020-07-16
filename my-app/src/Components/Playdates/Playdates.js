@@ -12,6 +12,8 @@ class Playdates extends React.Component {
                     <div className="dates-text-container">
                         <h1 className="dates-text">
                             Virtual Playdate pairs your child up with another child based on age and interests.
+                            <br/>
+                            <br/>
                             Once we find a match, you will recieve an email with a link to a playdate video stream
                             and more detailed information regarding the event.
                 </h1>
