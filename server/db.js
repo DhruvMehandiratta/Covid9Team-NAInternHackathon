@@ -7,7 +7,6 @@ const userInfoManager = new Cloudant({
     }
   }
 })
-
 const userDB = userInfoManager.db.use("user");
 const teacherDB = userInfoManager.db.use("teacher");
 
@@ -17,25 +16,20 @@ function createIndex(db) {
   const email = { name: "email", type: "json", index: { fields: ['email'] } }
   db.index(email, (err, res) => {
     if (err) { throw err }
-    console.log(res.result)
   })
 
 }
 
 async function searchUser(db, info) {
   return new Promise((resolve, reject) => {
-    console.log(info.email)
     db.find({ selector: { email: info.email } }, (err, result) => {
       if (err) {
         reject(err)
       };
       if (!result | result.docs.length == 0) {
-        console.log("not_found")
         const summary = { message: "USER_NOT_FOUND", password: false }
         resolve(summary);
       } else {
-        console.log('there');
-        console.log(result)
         resolve({ message: "FOUND", password: result.docs[0].password });
       }
     })
@@ -71,28 +65,20 @@ async function registerStudent(info) {
 
 async function loginTeacher(info) {
   return searchUser(teacherDB, info).then((ret) => {
-    console.log(ret.password, info.password)
-    if (ret.message == "FOUND" && info.password == ret.password) {
-      return ("CORRECT")
-    } else if (ret.message == "FOUND" && info.password != ret.password) {
-      throw ("WRONG_PASSWORD")
-    }
-    else {
+    if (ret.message == "NOT_FOUND") {
+      console.log("NOT_REGISTERED")
       throw ("NOT_REGISTERED")
     }
+    return ret.password;
   })
 }
 
 async function loginStudent(info) {
   return searchUser(userDB, info).then((ret) => {
-    if (ret.message == "FOUND" && info.password == ret.password) {
-      return ("CORRECT")
-    } else if (ret.message == "FOUND" && info.password != ret.password) {
-      throw ("WRONG_PASSWORD")
-    }
-    else {
+    if (ret.message == "NOT_FOUND") {
       throw ("NOT_REGISTERED")
     }
+    return ret.password;
   })
 }
 // const teacher1 = {

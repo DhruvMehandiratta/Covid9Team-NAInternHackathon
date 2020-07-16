@@ -15,7 +15,8 @@ app.use(bodyParser.json())
 //register as teacher
 app.post('/register/teacher', express.json(), async (req, res) => {
   const { email, name, phone } = req.body;
-  const hashedPassword = await bcrypt.hash(req.body.password, 10);
+  const salt = await bcrypt.genSaltSync(10);
+  const hashedPassword = await bcrypt.hashSync(req.body.password, salt);
   const info = { email: email, name: name, phone: phone, password: hashedPassword };
   try {
     await registerTeacher(info)
@@ -26,43 +27,55 @@ app.post('/register/teacher', express.json(), async (req, res) => {
 })
 //register as student
 app.post('/register/student', express.json(), async (req, res) => {
-  const { email, parent_name, child_name, phone } = req.body;
-  const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  const info = { email: email, parent_name: parent_name, child_name: child_name, phone: phone, password: hashedPassword };
+  console.log(req.body)
+  const { email, parent_name, child_name } = req.body;
+  const salt = await bcrypt.genSaltSync(10);
+  console.log(salt)
+  const hashedPassword = await bcrypt.hashSync(req.body.password, salt);
+  const info = { email: email, parent_name: parent_name, child_name: child_name, password: hashedPassword };
   try {
     await registerStudent(info)
     res.status(200).json({ message: "Student successfully registered" })
   } catch (err) {
-    res.status(409).json({ message: "This email address has already been registered" })
+    res.status(409).json({ message: err })
   }
 })
 //log in as a teacher
 app.post("/login/teacher", express.json(), async (req, res) => {
-  const { email } = req.body;
-  console.log(req.body.password)
-  const hashedPassword = await bcrypt.compare(req.body.password, 10);
-  const info = { email: email, password: hashedPassword };
+  const { email, password } = req.body;
+  const info = { email: email, password: password };
+  console.log(info)
   try {
-    await loginTeacher(info)
-    res.status(200).json({ message: "Teacher successfully logged in" });
+    const hashedPassword = await loginTeacher(info)
+    if (bcrypt.compareSync(password, hashedPassword)) {
+      res.status(200).json({ message: "Teacher successfully logged in" });
+    }
+    else {
+      res.status(409).json({ message: "Wrong password" })
+    }
   } catch (err) {
-    res.status(409).json({ message: err })
+    res.status(409).json({ message: "Not registered" })
   }
 });
 
 //log in as a student
 app.post("/login/student", express.json(), async (req, res) => {
-  const { email } = req.body;
-  const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  const info = { email: email, password: hashedPassword };
+  const { email, password } = req.body;
+  const info = { email: email, password: password };
   try {
-    await loginStudent(info)
-    res.status(200).json({ message: "Student successfully logged in" });
+    const hashedPassword = await loginStudent(info);
+    if (bcrypt.compareSync(password, hashedPassword)) {
+      res.status(200).json({ message: "Student successfully logged in" });
+    }
+    else {
+      res.status(409).json({ message: "Wrong password" })
+    }
   } catch (err) {
-    res.status(409).json({ message: err })
+    res.status(400).json({ message: err })
   }
 });
 
+<<<<<<< HEAD
 app.post("/addevent", express.json(), (req, res) => {
   const { google } = require('googleapis');
   const { OAuth2 } = google.auth
@@ -128,6 +141,8 @@ app.post("/addevent", express.json(), (req, res) => {
       }
     )
 });
+=======
+>>>>>>> 7ac96702bdc9f52eb8d8abbf0510122b3dd71863
 
 app.listen(PORT, ()=>{
   console.log(`Server running on port ${PORT}`);

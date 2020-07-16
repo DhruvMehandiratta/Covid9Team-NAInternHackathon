@@ -43,13 +43,13 @@ export const registerAsTeacher = (email, name, phone, password) => {
     .then(convertError);
 };
 
-export const registerAsStudent = (email, parent_name, child_name, phone, password) => {
+export const registerAsStudent = (email, parent_name, child_name, password) => {
   return fetch("/register/student", {
     method: "POST",
     headers: new Headers({
       "content-type": "application/json",
     }),
-    body: JSON.stringify({ email: email, parent_name: parent_name, child_name: child_name, phone: phone, password: password }),
+    body: JSON.stringify({ email: email, parent_name: parent_name, child_name: child_name, password: password }),
   })
     .catch(convertNetworkError)
     .then(convertError);
