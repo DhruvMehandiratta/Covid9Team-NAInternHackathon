@@ -2,17 +2,9 @@ import React from 'react'
 import image from '../../assets/kids-drawing.png';
 import './SignUp.css';
 import logo from '../../assets/logo.png'
-<<<<<<< HEAD
-
 export default function signup() {
     return (
         <>
-
-=======
-export default function signup() {
-    return (
-        <>
->>>>>>> 183613cda01f6d2f879a64cdff89a5d98bdeeb3d
             <body  className="body"> 
             <div style={{height: "100%",
                 width: "50%",

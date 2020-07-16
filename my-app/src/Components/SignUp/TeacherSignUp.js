@@ -2,10 +2,6 @@ import React from 'react'
 import image from '../../assets/kids-drawing.png';
 import logo from '../../assets/logo.png'
 import './SignUp.css';
-<<<<<<< HEAD
-  
-=======
->>>>>>> 183613cda01f6d2f879a64cdff89a5d98bdeeb3d
 export default function signup() {
     return (
         <>

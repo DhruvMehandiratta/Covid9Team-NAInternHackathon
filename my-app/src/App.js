@@ -15,6 +15,7 @@ import LoginPage from './Components/LoginPage/LoginPage'
 import StudentsSignUp from './Components/SignUp/StudentsSignUp'
 import TeacherSignUp from './Components/SignUp/TeacherSignUp'
 import RecordedVids from './Components/RecordedVids/RecordedVids';
+import Login from './Components/Login/Login'
 import logo from '../src/assets/logo.png';
 
 
@@ -50,7 +51,7 @@ import logo from '../src/assets/logo.png';
 
         <Switch>
           <Route path="/home">
-            <LandingPage />
+            <Login />
           </Route>
           <Route path="/learn">
             <LearnMore />
@@ -58,10 +59,10 @@ import logo from '../src/assets/logo.png';
           <Route path="/loginpage">
             <LoginPage/>
           </Route>
-          <Route path="/studentsSignUp">
+          <Route path="/parent/signup">
             <StudentsSignUp/>
           </Route>
-          <Route path="/teachersSignUp">
+          <Route path="/teacher/signup">
             <TeacherSignUp/>
           </Route>
           <Route path="/eventsSignUp">
