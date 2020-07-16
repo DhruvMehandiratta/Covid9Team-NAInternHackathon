@@ -27,10 +27,8 @@ app.post('/register/teacher', express.json(), async (req, res) => {
 })
 //register as student
 app.post('/register/student', express.json(), async (req, res) => {
-  console.log(req.body)
   const { email, parent_name, child_name } = req.body;
   const salt = await bcrypt.genSaltSync(10);
-  console.log(salt)
   const hashedPassword = await bcrypt.hashSync(req.body.password, salt);
   const info = { email: email, parent_name: parent_name, child_name: child_name, password: hashedPassword };
   try {
@@ -44,7 +42,6 @@ app.post('/register/student', express.json(), async (req, res) => {
 app.post("/login/teacher", express.json(), async (req, res) => {
   const { email, password } = req.body;
   const info = { email: email, password: password };
-  console.log(info)
   try {
     const hashedPassword = await loginTeacher(info)
     if (bcrypt.compareSync(password, hashedPassword)) {
