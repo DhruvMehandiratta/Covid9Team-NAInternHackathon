@@ -10,14 +10,20 @@ import {
   Route
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
+import EventSignUp from './Components/SignUp/EventSignUp'
+import LoginPage from './Components/LoginPage/LoginPage'
+import StudentsSignUp from './Components/SignUp/StudentsSignUp'
+import TeacherSignUp from './Components/SignUp/TeacherSignUp'
 import RecordedVids from './Components/RecordedVids/RecordedVids';
 import Games from './Components/Games/Games';
 import LiveStream from './Components/LiveStream/LiveStream';
 import Playdates from './Components/Playdates/Playdates';
 import logo from '../src/assets/logo.png';
 
-const App = () => {
-  return (
+
+
+ const App = () => {
+   return (
     <Router>
       <div className="main-container">
         <Container>
@@ -33,7 +39,7 @@ const App = () => {
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
-                <Nav.Link href="/login">
+                <Nav.Link href="/loginpage">
                   Login
                 </Nav.Link>
                 <NavDropdown title="Sign Up" renderMenuOnMount={true}>
@@ -51,6 +57,18 @@ const App = () => {
           </Route>
           <Route path="/learn">
             <LearnMore />
+          </Route>
+          <Route path="/loginpage">
+            <LoginPage/>
+          </Route>
+          <Route path="/parent/signup">
+            <StudentsSignUp/>
+          </Route>
+          <Route path="/teacher/signup">
+            <TeacherSignUp/>
+          </Route>
+          <Route path="/eventsSignUp">
+            <EventSignUp/>
           </Route>
           <Route path="/calendar">
             <Calendar />
