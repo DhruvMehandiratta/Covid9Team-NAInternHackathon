@@ -6,6 +6,9 @@ import "carbon-components/css/carbon-components.min.css";
 import image1 from '../../assets/dino.png';
 import image2 from '../../assets/strategy.png';
 import image3 from '../../assets/story.png';
+import image4 from '../../assets/story2.png';
+import image5 from '../../assets/dino2.png';
+import image6 from '../../assets/strategy2.png';
 
 class Games extends React.Component {
 	render() {
@@ -35,6 +38,9 @@ class Games extends React.Component {
                                 <img className="games-image" alt="empty" src={image1} />
                                 <img className="games-image" alt="empty" src={image2} />
                                 <img className="games-image" alt="empty" src={image3} />
+                                <img className="games-image" alt="empty" src={image4} />
+                                <img className="games-image" alt="empty" src={image5} />
+                                <img className="games-image" alt="empty" src={image6} />
                             </div>
                         </div>
                     </div>
