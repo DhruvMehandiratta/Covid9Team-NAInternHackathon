@@ -1,6 +1,5 @@
 import React from 'react';
-import './LoginPage.css';
-import { Container, Button, FormCheck } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import image from '../../assets/kids-drawing.png';
 
 const LandingPage = () => {

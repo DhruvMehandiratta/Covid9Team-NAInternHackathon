@@ -19,13 +19,13 @@ class RecordedVids extends React.Component {
                             <Search id="search" placeHolderText="Search the available classes" labelText="Search" />
                             <div className="filterPanel">
                                 <Accordion>
-                                    <AccordionItem title="Hobbies"><a className="filters" href="#">Arts and Craft</a></AccordionItem>
+                                    <AccordionItem title="Hobbies"><a className="filters" href="/videos/hobbies">Arts and Craft</a></AccordionItem>
                                 </Accordion>
                                 <Accordion>
-                                    <AccordionItem title="Reading"><a className="filters" href="#">Story Hour</a></AccordionItem>
+                                    <AccordionItem title="Reading"><a className="filters" href="/videos/reading">Story Hour</a></AccordionItem>
                                 </Accordion>
                                 <Accordion>
-                                    <AccordionItem title="Writing"><a className="filters" href="#">Creative Writing</a></AccordionItem>
+                                    <AccordionItem title="Writing"><a className="filters" href="/videos/writing">Creative Writing</a></AccordionItem>
                                 </Accordion>
                             </div>
                             <div className="videos">

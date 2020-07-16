@@ -1,6 +1,5 @@
 import React from 'react'
 import image from '../../assets/kids-drawing.png';
-import './SignUp.css';
 import logo from '../../assets/logo.png'
 export default function signup() {
     return (
@@ -25,7 +24,7 @@ export default function signup() {
                     <input style={{fontSize:"25px", borderRadius: "10px", backgroundColor: "Gainsboro", fontFamily: "Arial",height:"50px", width:"300px", fontFamily: "Poppins"}} type="text" id="child_email"></input><br/><br/>
                     <label style={{fontFamily: "Poppins", fontSize:"25px"}}>Password:</label><br/><br/>
                     <input style={{fontSize:"25px", borderRadius: "10px", backgroundColor: "Gainsboro", fontFamily: "Arial",height:"50px", width:"300px", fontFamily: "Poppins"}} type="password" id="child_password"></input><br/><br/><br/>
-                    <button style={{fontFamily: "Poppins", fontSize:"15px", marginLeft: "100px", zIndex: "9999", transition: "all 0.2s ease-in 0s", cursor: "pointer", left:"50%", backgroundColor: "#b959ea",height:"50px", width:"100px", borderRadius: "12px"}} type="button" id="child_signup_button">Sign Up</button>                    
+                    <button style={{fontFamily: "Poppins", fontSize:"15px", marginLeft: "100px", zIndex: "9999", transition: "all 0.2s ease-in 0s", cursor: "pointer", left:"50%", backgroundColor: "#b959ea",height:"50px", width:"100px", borderRadius: "12px", color: "white" }} type="button" id="child_signup_button">Sign Up</button>                    
                 </form>
             </div>
         </body>
