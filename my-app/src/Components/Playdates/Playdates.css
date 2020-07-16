@@ -50,6 +50,15 @@
     border: none;
   }
 
+  .dates-class-button:hover {
+    background-color: #af26f5;
+  }
+
+  .dates-class-button:active {
+    background-color: #af26f5;
+    border: none;
+  }
+
   .input {
       width: 300px;
   }
