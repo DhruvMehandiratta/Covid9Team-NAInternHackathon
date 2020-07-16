@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { loginAsTeacher } from "./server/service";
+import React from "react";
+// import { loginAsTeacher } from "./server/service";
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
 import Calendar from './Components/Calendar/Calendar'

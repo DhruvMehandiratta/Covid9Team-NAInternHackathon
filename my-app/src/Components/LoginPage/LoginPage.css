@@ -16,3 +16,62 @@
     left: 600px;
     z-index: 1;
 }
+
+.loginLayout {
+    align-content: center;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 750px;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.labelLayout {
+    font-family: "Poppins";
+    font-size: 25px;
+}
+
+.checkboxTextLayout {
+    font-family: "ComicSans";
+    font-size: 30px;
+}
+
+.inputLayout {
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: "Gainsboro";
+    height: 50px;
+    width: 300px;
+    font-family: "Poppins"
+}
+
+.checkboxLayout {
+    margin-left: 10px;
+    top: 20px;
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: "Gainsboro";
+    font-family: "Poppins";
+    height: 30px;
+    width: 30px;
+}
+
+.buttonLayout {
+    font-family: "Poppins";
+    font-size: 15px;
+    margin-left: 50px;
+    z-index: 1;
+    transition: "all 0.2s ease-in 0s";
+     cursor: "pointer";
+      background-color: #b959ea;
+      height: 50px; 
+      width: 100px;
+      border-radius: 12px;
+      color: white;
+      position: relative;
+      top: 30px;
+      left: 30px;
+}
+
