@@ -34,7 +34,7 @@
     height: 50px;
     width: 100px;
     left: 800px;
-    top: -20px;
+    top: 10px;
     border: none;
   }
 
@@ -57,7 +57,7 @@
   
   .main-text {
     position: relative;
-    top: 200px;
+    top: 250px;
     left: 200px;
     font-size: 20px;
     z-index: 1;
@@ -66,7 +66,7 @@
   .main-image {
     width: 800px;
     position: relative;
-    top: 0px;
+    top: 35px;
     left: 250px;
     z-index: 1;
   }
