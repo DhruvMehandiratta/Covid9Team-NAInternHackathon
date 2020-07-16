@@ -30,9 +30,8 @@ getUserMedia({ video: true, audio: true }, function (err, stream) {
 
   peer.on('stream', function (stream) {
     var video = document.createElement('video')
+    video.srcObject=stream;
     document.body.appendChild(video)
-
-    video.src = window.URL.createObjectURL(stream)
     video.play()
   })
 })
