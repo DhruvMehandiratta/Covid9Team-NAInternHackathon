@@ -5,6 +5,7 @@
     justify-content: flex-end;
     color: black;
     margin-top: 8rem;
+    height: 200px;
 }
 
 .learn-text {
@@ -25,12 +26,18 @@
     flex-direction: column;
     position: relative;
     padding-bottom:50px;
+    left: -200px;
+    top: 100px;
+    height: 100px;
+    width: 100px;
 }
 
 .content-container {
     position: relative;
     left: 100px;
-    top: -300px;
+    top: -100px;
+    height: 100px;
+    width: 100px;
 }
 
 .content-container1 {
@@ -50,7 +57,7 @@
     color: black;
     margin-top: 8rem;
     position:relative;
-    top:-570px;
+    top:-620px;
     left:250px;
 }
 
