@@ -1,11 +1,12 @@
 import React from 'react';
+import './LoginPage.css'
 import { Container } from 'react-bootstrap';
 import image from '../../assets/kids-drawing.png';
 
 const LandingPage = () => {
     return (
         <Container>
-            <div className="main-page">
+            <div className="login-page">
                 <div style={{alignContent: "center", height: "100%", position: "fixed", zIndex:"1", top: 100, left:750, width:"50%", marginTop: "100px"}}>
                     <form>
                     <label style={{fontFamily: "Poppins", fontSize:"25px"}}>Email:</label> <br/><br/>
@@ -19,7 +20,7 @@ const LandingPage = () => {
                     </form>
 
                 </div>
-                <img className="main-image" alt="empty" src={image} />
+                <img className="login-image" alt="empty" src={image} />
             </div>
         </Container>
     );
