@@ -11,13 +11,16 @@
     position: relative;
     top: 100px;
     left: -300px;
-    width: 500px;
     z-index: 1;
+    height: 100px;
+    width: 500px;
   }  
 
   .datesContainer {
     top: -30px;
     position: relative;
+    width: 100px;
+    height: 100px;
   }
 
 .dates-text-container {
@@ -25,12 +28,16 @@
     flex-direction: column;
     position: relative;
     padding-bottom:50px;
+    width: 100px;
+    height: 100px;
+    left: -250px;
+    top: -30px;
 }
 
 .dates-content-container {
     position: relative;
     left: 300px;
-    top: -545px;
+    top: -100px;
     background-color: lightgrey;
     width: 500px;
     height: 680px;
