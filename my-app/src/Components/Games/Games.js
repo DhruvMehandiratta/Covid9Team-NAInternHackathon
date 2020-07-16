@@ -39,14 +39,23 @@ class Games extends React.Component {
                             </div>
                             <div className="gamesContentAll">
                                 <img className="games-image" alt="empty" src={image1} />
+                                <a className="gameLinks" href="http://pbskids.org/sesame/games/ernies-dinosaur-daycare/">Dinosaur Daycare</a>
                                 <img className="games-image" alt="empty" src={image2} />
+                                <a className="gameLinks"href="http://pbskids.org/sesame/games/dress-up-time/">Dress Up Time!</a>
                                 <img className="games-image" alt="empty" src={image3} />
+                                <a className="gameLinks"href="http://pbskids.org/sesame/games/story-book-builder/">Storybook Builder</a>
                                 <img className="games-image" alt="empty" src={image4} />
+                                <a className="gameLinks"href="https://pbskids.org/superwhy/games/super-why-saves-the-day/">Super Why Saves The Day!</a>
                                 <img className="games-image" alt="empty" src={image5} />
+                                <a className="gameLinks"href="http://pbskids.org/dinosaurtrain/games/airshow.html">Air Show</a>
                                 <img className="games-image" alt="empty" src={image6} />
+                                <a className="gameLinks"href="https://pbskids.org/sesame/games/detective-elmo-the-cookie-case">Detective Elmo: The Cookie Case</a>
                                 <img className="games-image" alt="empty" src={image7} />
+                                <a className="gameLinks"href="https://pbskids.org/sesame/games/elmos-school-friends/">Elmo's School Friends</a>
                                 <img className="games-image" alt="empty" src={image8} />
+                                <a className="gameLinks"href="https://pbskids.org/daniel/stories/something-special-for-dad/">Something Special for Dad</a>
                                 <img className="games-image" alt="empty" src={image9} />
+                                <a className="gameLinks" href="http://pbskids.org/dinosaurtrain/games/buddysamazingadventure.html">Buddy's A-maze-ing Adventure</a>
                             </div>
                         </div>
                     </div>

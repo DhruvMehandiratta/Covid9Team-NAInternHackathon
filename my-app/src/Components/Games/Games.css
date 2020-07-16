@@ -84,3 +84,10 @@
     height: 200px;
     padding: 20px;
 }
+
+.gameLinks {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: -196px;
+}
