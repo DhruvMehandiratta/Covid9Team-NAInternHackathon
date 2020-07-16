@@ -1,7 +1,6 @@
 import React from 'react'
 import image from '../../assets/kids-drawing.png';
 import logo from '../../assets/logo.png'
-import './SignUp.css';
 export default function signup() {
     return (
         <>
