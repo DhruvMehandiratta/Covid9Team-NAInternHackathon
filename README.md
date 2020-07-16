@@ -18,7 +18,7 @@ Live Peer to Peer video streaming, Playdates, Events Signup, Teacher and Parents
 <img src='./live_classroom.png'/>
     In educational videos, it contains different level of informative recorded videos. Have fun watching!
 <img src='./educational.png' />
-**We also have online playdates service so kids can have some face-to-face time with fellow friends. And who doesn't want some game!**
+**We also have online playdates service so kids can have some face-to-face time with fellow friends. And who doesn't want to play some games!**
 
 ### Technologies used
 HTML, CSS, React.js, IBM Cloud (Cloundant), Google Calendar API, Simple Peer (for peer to peer live streaming via RTC).
