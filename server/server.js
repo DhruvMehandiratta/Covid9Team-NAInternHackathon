@@ -75,7 +75,6 @@ app.post("/login/student", express.json(), async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
 app.post("/addevent", express.json(), (req, res) => {
   const { google } = require('googleapis');
   const { OAuth2 } = google.auth
@@ -141,8 +140,6 @@ app.post("/addevent", express.json(), (req, res) => {
       }
     )
 });
-=======
->>>>>>> 7ac96702bdc9f52eb8d8abbf0510122b3dd71863
 
 app.listen(PORT, ()=>{
   console.log(`Server running on port ${PORT}`);
