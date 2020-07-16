@@ -80,7 +80,7 @@
 }
 
 .games-image {
-    width: 300px;
+    width: 250px;
     height: 200px;
     padding: 20px;
 }
@@ -89,5 +89,40 @@
     text-decoration: none;
     color: black;
     position: relative;
-    left: -196px;
+    left: -3px;
+}
+
+.gamesContainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    margin-top: 8rem;
+    position: relative;
+    top: -100px;
+    left: -295px;
+}
+
+.gamesContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    margin-top: 8rem;
+    position: relative;
+    top: -871px;
+}
+
+.gamesContainer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    margin-top: 8rem;
+    position: relative;
+    top: -1640px;
+    left: 300px;
 }
