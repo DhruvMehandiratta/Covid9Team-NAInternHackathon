@@ -1,14 +1,14 @@
 import React, { useState, useContext } from "react";
-import { postLogin } from "./service";
+import { loginAsTeacher } from "./service";
 
 import './App.css';
 
 function App() {
   const [username, setUsername] = useState("");
-  const [password,setPassword] = useState("")
+  const [password, setPassword] = useState("")
   const performLogin = (e) => {
     e.preventDefault();
-    postLogin(username,password)
+    loginAsTeacher(username, password)
       .then((userInfo) => {
         console.log(userInfo);
       })
@@ -19,11 +19,11 @@ function App() {
 
   return (
     <div className="login">
-      <form onSubmit={(e)=>performLogin(e)}>
-        <input onChange={(e)=>{setUsername(e.target.value)}}/>
-        <input onChange={(e)=>{setPassword(e.target.value)}}/>
-         <button type="submit" disabled={!username}>
-            Login
+      <form onSubmit={(e) => performLogin(e)}>
+        <input onChange={(e) => { setUsername(e.target.value) }} />
+        <input onChange={(e) => { setPassword(e.target.value) }} />
+        <button type="submit" disabled={!username}>
+          Login
           </button>
       </form>
     </div>

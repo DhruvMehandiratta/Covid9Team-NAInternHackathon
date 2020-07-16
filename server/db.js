@@ -71,6 +71,7 @@ async function registerStudent(info) {
 
 async function loginTeacher(info) {
   return searchUser(teacherDB, info).then((ret) => {
+    console.log(ret.password, info.password)
     if (ret.message == "FOUND" && info.password == ret.password) {
       return ("CORRECT")
     } else if (ret.message == "FOUND" && info.password != ret.password) {
