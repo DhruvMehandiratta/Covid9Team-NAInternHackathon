@@ -19,27 +19,7 @@ src: contains the code files, assets, stream and server.
 stream: contains the work for peer to peer live videos.
 server: contains the backend part implemented using IBM Cloud.
 
-Code Files: -
-LoginPage.js: contains the login page front-end.
-LoginPage.css: contains the css for LoginPage.js
-TeacherSignUp.js: - form to sign up teachers on out platform.
-TeacherSignUp.css: - css for TeacherSignUp.js
-StudentsSignUp.js: - form to sign up teachers on out platform.
-StudentsSignUp.css: - css for StudentsSignUp.js
-EventsSignUp.js: - form to register events
-EventsSignUp.css: - css for EventsSignUp.js
-Calendar.js: - calendar to add events.
-Calendar.css: - css for Calendar.js
-Games.js: - for streaming games.
-Games.css: - css for Games.js
-LandingPage.js: - Home page of website.
-LandingPage.css: - css for LandingPage.js
-LearnMore.js: - more interactive stuff for children
-LearnMore.css: - css for LearnMore.js
-LiveStream.js: - live video streaming for peer to peer communication
-LiveStream.css: - css for LiveStream.js
-Playdates.js: - for match making amongst children
-Playdates.css: - css for Playdates.js
+
 
 Thanks!
 
