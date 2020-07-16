@@ -27,6 +27,15 @@ class RecordedVids extends React.Component {
                                 <Accordion>
                                     <AccordionItem title="Writing"><a className="filters" href="/videos/writing">Creative Writing</a></AccordionItem>
                                 </Accordion>
+                                <Accordion>
+                                    <AccordionItem title="Mathematics"><a className="filters" href="/videos/math">Numbers</a></AccordionItem>
+                                </Accordion>
+                                <Accordion>
+                                    <AccordionItem title="Language"><a className="filters" href="/videos/languages">Spanish</a></AccordionItem>
+                                </Accordion>
+                                <Accordion>
+                                    <AccordionItem title="Animals"><a className="filters" href="/videos/animals">Zoo Animals</a></AccordionItem>
+                                </Accordion>
                             </div>
                             <div className="videos">
                                 <iframe className="vid" title="vid1" width="560" height="315" src="https://www.youtube.com/embed/Xa_qNH8u3OM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -38,7 +47,9 @@ class RecordedVids extends React.Component {
                                 <iframe className="vid" title="vid7" width="560" height="315" src="https://www.youtube.com/embed/T53yDxrnLMY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 <iframe className="vid" title="vid8" width="560" height="315" src="https://www.youtube.com/embed/ONvNWclIes4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 <iframe className="vid" title="vid9" width="560" height="315" src="https://www.youtube.com/embed/e5o8GAtWSZM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
+                                <iframe className="vid" title="vid9" width="560" height="315" src="https://www.youtube.com/embed/UL8kfIfXF9M" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <iframe className="vid" title="vid9" width="560" height="315" src="https://www.youtube.com/embed/LvlKXm1_z8E" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <iframe className="vid" title="vid9" width="560" height="315" src="https://www.youtube.com/embed/DA-WYdDaJlU" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 </div>
                         </div>
                     </div>

@@ -4,6 +4,8 @@ import { Container } from 'react-bootstrap';
 import image from '../../assets/kids-drawing.png';
 import { loginAsTeacher, loginAsStudent } from '../../server/service.js';
 
+/* document */
+
 const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState('');
@@ -26,12 +28,20 @@ const LoginPage = () => {
             })
         }
 
+        if (document.getElementById("login_email").value === "" &&
+            document.getElementById("login_email").value === "" &&
+            document.getElementById("login_email").value === "") {
+            alert("All fields are required");
+        } else {
+            window.location.href="/home"
+        }
     }
+
     return (
         <Container>
             <div className="login-page">
                 <div className="loginLayout">
-                    <form onSubmit={(e) => performLogin(e)}>
+                    <form className="formLayout" onSubmit={(e) => performLogin(e)}>
                         <label className="labelLayout">Email:</label> <br /><br />
                         <input onChange={(e) => setEmail(e.target.value)}
                         className="inputLayout" type="text" id="login_email"></input><br /><br />
@@ -42,7 +52,6 @@ const LoginPage = () => {
                         <input onChange={(e) => setIsStudent(e.target.checked)}
                             className="checkboxLayout" type="checkbox" id="login_checkbox"></input><br /><br /><br />
                         <button  className="buttonLayout" type="submit" id="login_button">Login</button>
-
                     </form>
                     <p className="loginStatus">{loginStatus}</p>
                 </div>

@@ -17,25 +17,41 @@
     z-index: 1;
 }
 
+.formLayout {
+    position: relative;
+    top: -23px;
+    left: -150px;
+    background-color: lightgray;
+    border-radius: 10px;
+    height: 380px;
+    width: 400px;
+}
+
 .loginLayout {
     align-content: center;
-    height: 100%;
     position: fixed;
     z-index: 1;
     top: 100px;
     left: 750px;
-    width: 50%;
+    width: 500px;
+    height: 680px;
     margin-top: 100px;
 }
 
 .labelLayout {
     font-family: "Poppins";
     font-size: 25px;
+    position: relative;
+    left: 50px;
+    top: 20px;
 }
 
 .checkboxTextLayout {
     font-family: "ComicSans";
     font-size: 30px;
+    position: relative;
+    top: 43px;
+    left: 30px;
 }
 
 .inputLayout {
@@ -44,7 +60,11 @@
     background-color: "Gainsboro";
     height: 50px;
     width: 300px;
-    font-family: "Poppins"
+    font-family: "Poppins";
+    position: relative;
+    left: 50px;
+    top: 30px;
+
 }
 
 .checkboxLayout {
@@ -56,10 +76,12 @@
     font-family: "Poppins";
     height: 30px;
     width: 30px;
+    position: relative;
+    top: 50px;
+    left: 60px;
 }
 
 .buttonLayout {
-    font-family: "Poppins";
     font-size: 15px;
     margin-left: 50px;
     z-index: 1;
@@ -72,6 +94,6 @@
       color: white;
       position: relative;
       top: 30px;
-      left: 30px;
+      left: 80px;
 }
 

@@ -1,0 +1,55 @@
+.eventContainer {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 100px;
+    width: 50%;
+    margin-top: 100px;
+}
+
+.eventLabel {
+    font-family: "Poppins";
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+.eventInput {
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: "Gainsboro";
+    height: 50px;
+    width: 300px;
+    font-family: "Poppins";
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+
+.eventButton {
+    font-size: 15px;
+    margin-left: 50px;
+    z-index: 1;
+    transition: "all 0.2s ease-in 0s";
+     cursor: "pointer";
+      background-color: #b959ea;
+      height: 50px; 
+      width: 100px;
+      border-radius: 12px;
+      color: white;
+      position: relative;
+      top: 30px;
+      left: 100px;
+}
+
+.eventForm {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    height: 537px;
+    width: 400px;
+}
