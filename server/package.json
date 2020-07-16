@@ -17,6 +17,8 @@
     "googleapis": "^54.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "budo": "^11.6.4",
+    "nodemon": "^2.0.4",
+    "watchify": "^3.11.1"
   }
 }
