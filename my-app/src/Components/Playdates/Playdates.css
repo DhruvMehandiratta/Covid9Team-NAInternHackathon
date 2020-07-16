@@ -57,7 +57,9 @@
     width: 100px;
     border-radius: 12px;
     color: white;
-    border: none;
+    position: relative;
+    top: 30px;
+    left: 30px;
   }
 
   .dates-class-button:hover {

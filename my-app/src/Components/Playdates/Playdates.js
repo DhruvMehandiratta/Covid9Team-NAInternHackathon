@@ -1,7 +1,6 @@
 import React from 'react';
 import './Playdates.css';
-import { Container, Button } from 'react-bootstrap';
-import { TextInput, TextArea } from 'carbon-components-react'
+import { Container } from 'react-bootstrap';
 
 
 class Playdates extends React.Component {
@@ -49,9 +48,9 @@ class Playdates extends React.Component {
                             <input className="input" type="text" id="email"></input>
                             <br />
                             <br />
-                            <Button className="dates-class-button" href="/learn">
+                            <button className="dates-class-button" href="/learn">
                                 Sign Up
-                        </Button>
+                        </button>
                         </div>
                     </div>
                 </div>
