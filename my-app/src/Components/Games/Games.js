@@ -12,6 +12,10 @@ import image6 from '../../assets/strategy2.png';
 import image7 from '../../assets/strategy3.png';
 import image8 from '../../assets/story3.png';
 import image9 from '../../assets/dino3.png';
+import image10 from '../../assets/animal.png';
+import image11 from '../../assets/music.png';
+import image12 from '../../assets/language.png';
+
 
 class Games extends React.Component {
 	render() {
@@ -36,6 +40,15 @@ class Games extends React.Component {
                                 <Accordion>
                                     <AccordionItem title="Adventure Games"><a className="filters" href="/games/reading">Dinosaur Games</a></AccordionItem>
                                 </Accordion>
+                                <Accordion>
+                                    <AccordionItem title="Animal Games"><a className="filters" href="/games/animal">Dog Games</a></AccordionItem>
+                                </Accordion>
+                                <Accordion>
+                                    <AccordionItem title="Language Games"><a className="filters" href="/games/language">Spanish Games</a></AccordionItem>
+                                </Accordion>
+                                <Accordion>
+                                    <AccordionItem title="Music Games"><a className="filters" href="/games/music">Guitar Games</a></AccordionItem>
+                                </Accordion>
                             </div>
                             <div className="gamesContentAll">
                                 <div className="gamesContainer1">
@@ -45,6 +58,8 @@ class Games extends React.Component {
                                     <a className="gameLinks" href="http://pbskids.org/sesame/games/dress-up-time/">Dress Up Time!</a>
                                     <img className="games-image" alt="empty" src={image3} />
                                     <a className="gameLinks" href="http://pbskids.org/sesame/games/story-book-builder/">Storybook Builder</a>
+                                    <img className="games-image" alt="empty" src={image10} />
+                                    <a className="gameLinks" href="http://www.pbskids.org/martha/games/marthassteaks/index.html">Martha's Steaks</a>
                                 </div>
                                 <div className="gamesContainer2">
                                     <img className="games-image" alt="empty" src={image4} />
@@ -53,6 +68,8 @@ class Games extends React.Component {
                                     <a className="gameLinks" href="http://pbskids.org/dinosaurtrain/games/airshow.html">Air Show</a>
                                     <img className="games-image" alt="empty" src={image6} />
                                     <a className="gameLinks" href="https://pbskids.org/sesame/games/detective-elmo-the-cookie-case">Detective Elmo: The Cookie Case</a>
+                                    <img className="games-image" alt="empty" src={image11} />
+                                    <a className="gameLinks" href="https://pbskids.org/daniel/games/music-shop/">Music Shop</a>
                                 </div>
                                 <div className="gamesContainer3">
                                     <img className="games-image" alt="empty" src={image7} />
@@ -61,6 +78,8 @@ class Games extends React.Component {
                                     <a className="gameLinks" href="https://pbskids.org/daniel/stories/something-special-for-dad/">Something Special for Dad</a>
                                     <img className="games-image" alt="empty" src={image9} />
                                     <a className="gameLinks" href="http://pbskids.org/dinosaurtrain/games/buddysamazingadventure.html">Buddy's A-maze-ing Adventure</a>
+                                    <img className="games-image" alt="empty" src={image12} />
+                                    <a className="gameLinks" href="http://pbskids.org/catinthehat/games_span/span-sketch-a-mite.html">Dibuja Mita</a>
                                 </div>
                             </div>
                         </div>

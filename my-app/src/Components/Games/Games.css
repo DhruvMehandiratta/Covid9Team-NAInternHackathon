@@ -112,7 +112,7 @@
     color: black;
     margin-top: 8rem;
     position: relative;
-    top: -871px;
+    top: -1083px;
 }
 
 .gamesContainer3 {
@@ -123,6 +123,14 @@
     color: black;
     margin-top: 8rem;
     position: relative;
-    top: -1640px;
+    top: -2067px;
     left: 300px;
+}
+
+.bx--accordion__item--active .bx--accordion__content {
+    width: 300px;
+}
+
+.bx--accordion__title {
+    height: 35px;
 }
