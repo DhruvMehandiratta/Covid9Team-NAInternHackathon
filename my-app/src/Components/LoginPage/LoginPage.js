@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
-import { Container, Button, FormCheck } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import image from '../../assets/kids-drawing.png';
 import { loginAsTeacher, loginAsStudent } from '../../../src/service.js';
 
@@ -29,7 +29,7 @@ const LandingPage = () => {
     }
     return (
         <Container>
-            <div className="main-page">
+            <div className="login-page">
                 <div style={{ alignContent: "center", height: "100%", position: "fixed", zIndex: "1", top: 100, left: 750, width: "50%", marginTop: "100px" }}>
                     <form onSubmit={(e) => performLogin(e)}>
                         <label style={{ fontFamily: "Poppins", fontSize: "25px" }}>Email:</label> <br /><br />
@@ -46,7 +46,7 @@ const LandingPage = () => {
                     </form>
                     <p className="loginStatus">{loginStatus}</p>
                 </div>
-                <img className="main-image" alt="empty" src={image} />
+                <img className="login-image" alt="empty" src={image} />
             </div>
         </Container>
     );

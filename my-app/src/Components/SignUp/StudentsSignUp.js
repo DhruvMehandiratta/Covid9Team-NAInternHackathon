@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import image from '../../assets/kids-drawing.png';
-import { Container, Button, FormCheck } from 'react-bootstrap';
-import './SignUp.css';
+import { Container } from 'react-bootstrap';
 import logo from '../../assets/logo.png'
 import { registerAsStudent } from '../../../src/service.js';
 

@@ -1,4 +1,4 @@
-.vids-page {
+.games-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,14 +7,12 @@
     margin-top: 8rem;
 }
 
-.vid-text {
+.games-text {
     position: relative;
-    top: 100px;
-    left: -300px;
-    width: 400px;
-}  
+    top: 50px;
+  }  
 
-.vidsContainer {
+  .gamesContainer {
     top: -30px;
     position: relative;
     z-index: 1;
@@ -22,9 +20,9 @@
     height: 100%;
     background-color: #AFE7E7;
     border-radius: 10px;
-}
+  }
 
-.vids-text-container {
+.games-text-container {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -33,42 +31,42 @@
     top: 50px;
 }
 
-.vid-content-container {
+.games-content-container {
     position: relative;
     left: 100px;
     top: -300px;
 }
 
-.searchContainer {
+.searchGamesContainer {
     position: relative;
-    top: 300px;
+    top: 350px;
     left: -145px;
-    width: 700px;
+    width: 400px;
 }
 
-.filterPanel {
+.filterPanelGames {
     position: absolute;
-    background-color: #C5FB7F !important;
+    background-color: #C5FB7F;
     position: relative;
     top: 52px;
-    left: -174px;
-    width: 40%;
+    left: -325px;
+    width: 60%;
     height: 1000px;
     overflow: hidden;
 }
 
-.videos {
+.gamesContentAll {
     display: inline-block;
     background-color: #FFD583;
     top: 100px;
-    width: 859px;
+    width: 900px;
     height: 1000px;
-    left: 106px;
+    left: -85px;
     position: absolute;
 }
 
-.vid {
-    width: 280px;
+.game {
+    width: 300px;
     height: 200px;
     padding: 20px;
 }
@@ -77,11 +75,12 @@
     border: none !important;
 }
 
-.filters {
-    color: black;
-    padding-left: 30px;
-}
-
 .filters:hover {
     text-decoration: none !important;
+}
+
+.games-image {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
 }

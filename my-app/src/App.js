@@ -16,6 +16,9 @@ import LoginPage from './Components/LoginPage/LoginPage'
 import StudentsSignUp from './Components/SignUp/StudentsSignUp'
 import TeacherSignUp from './Components/SignUp/TeacherSignUp'
 import RecordedVids from './Components/RecordedVids/RecordedVids';
+import Games from './Components/Games/Games';
+import LiveStream from './Components/LiveStream/LiveStream';
+import Playdates from './Components/Playdates/Playdates';
 import logo from '../src/assets/logo.png';
 
 
@@ -36,7 +39,7 @@ const App = () => {
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
-                <Nav.Link href="/loginpage">
+                <Nav.Link href="/login">
                   Login
                 </Nav.Link>
                 <NavDropdown title="Sign Up" renderMenuOnMount={true}>
@@ -55,7 +58,7 @@ const App = () => {
           <Route path="/learn">
             <LearnMore />
           </Route>
-          <Route path="/loginpage">
+          <Route path="/login">
             <LoginPage />
           </Route>
           <Route path="/parent/signup">
@@ -64,7 +67,7 @@ const App = () => {
           <Route path="/teacher/signup">
             <TeacherSignUp />
           </Route>
-          <Route path="/eventsSignUp">
+          <Route path="/events/signup">
             <EventSignUp />
           </Route>
           <Route path="/calendar">
@@ -72,6 +75,15 @@ const App = () => {
           </Route>
           <Route path="/videos">
             <RecordedVids />
+          </Route>
+          <Route path="/games">
+            <Games />
+          </Route>
+          <Route path="/stream">
+            <LiveStream />
+          </Route>
+          <Route path="/playdates">
+            <Playdates />
           </Route>
         </Switch>
 

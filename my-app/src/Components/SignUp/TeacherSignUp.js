@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import image from '../../assets/kids-drawing.png';
 import logo from '../../assets/logo.png'
-import './SignUp.css';
 import { registerAsTeacher } from '../../../src/service.js';
 
 function TeacherSignUp() {
