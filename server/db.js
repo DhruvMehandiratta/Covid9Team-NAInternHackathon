@@ -7,7 +7,6 @@ const userInfoManager = new Cloudant({
     }
   }
 })
-
 const userDB = userInfoManager.db.use("user");
 const teacherDB = userInfoManager.db.use("teacher");
 
@@ -71,28 +70,19 @@ async function registerStudent(info) {
 
 async function loginTeacher(info) {
   return searchUser(teacherDB, info).then((ret) => {
-    console.log(ret.password, info.password)
-    if (ret.message == "FOUND" && info.password == ret.password) {
-      return ("CORRECT")
-    } else if (ret.message == "FOUND" && info.password != ret.password) {
-      throw ("WRONG_PASSWORD")
-    }
-    else {
+    if (ret.message == "NOT_FOUND") {
       throw ("NOT_REGISTERED")
     }
+    return ret.password;
   })
 }
 
 async function loginStudent(info) {
   return searchUser(userDB, info).then((ret) => {
-    if (ret.message == "FOUND" && info.password == ret.password) {
-      return ("CORRECT")
-    } else if (ret.message == "FOUND" && info.password != ret.password) {
-      throw ("WRONG_PASSWORD")
-    }
-    else {
+    if (ret.message == "NOT_FOUND") {
       throw ("NOT_REGISTERED")
     }
+    return ret.password;
   })
 }
 // const teacher1 = {
