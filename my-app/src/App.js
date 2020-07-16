@@ -9,9 +9,16 @@ import {
   Route
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
+import EventSignUp from './Components/SignUp/EventSignUp'
+import LoginPage from './Components/LoginPage/LoginPage'
+import StudentsSignUp from './Components/SignUp/StudentsSignUp'
+import TeacherSignUp from './Components/SignUp/TeacherSignUp'
 
-const App = () => {
-  return (
+
+
+ const App = () => {
+   return (
+
     <Router>
       <div className="main-container">
         <Container>
@@ -29,7 +36,7 @@ const App = () => {
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
-                <Nav.Link href="/login">
+                <Nav.Link href="/loginpage">
                   Login
                 </Nav.Link>
               </Nav>
@@ -44,6 +51,19 @@ const App = () => {
           <Route path="/learn">
             <LearnMore />
           </Route>
+          <Route path="/loginpage">
+            <LoginPage/>
+          </Route>
+          <Route path="/studentsSignUp">
+            <StudentsSignUp/>
+          </Route>
+          <Route path="/teachersSignUp">
+            <TeacherSignUp/>
+          </Route>
+          <Route path="/eventsSignUp">
+            <EventSignUp/>
+          </Route>
+
         </Switch>
       </div>
     </Router>
