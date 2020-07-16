@@ -39,7 +39,7 @@ import logo from '../src/assets/logo.png';
                 <Nav.Link href="/learn">
                   Learn More
                 </Nav.Link>
-                <Nav.Link href="/loginpage">
+                <Nav.Link href="/login">
                   Login
                 </Nav.Link>
                 <NavDropdown title="Sign Up" renderMenuOnMount={true}>
@@ -58,7 +58,7 @@ import logo from '../src/assets/logo.png';
           <Route path="/learn">
             <LearnMore />
           </Route>
-          <Route path="/loginpage">
+          <Route path="/login">
             <LoginPage/>
           </Route>
           <Route path="/parent/signup">
@@ -67,7 +67,7 @@ import logo from '../src/assets/logo.png';
           <Route path="/teacher/signup">
             <TeacherSignUp/>
           </Route>
-          <Route path="/eventsSignUp">
+          <Route path="/events/signup">
             <EventSignUp/>
           </Route>
           <Route path="/calendar">
