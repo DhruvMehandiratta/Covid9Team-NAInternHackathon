@@ -11,6 +11,9 @@ import {
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
 import RecordedVids from './Components/RecordedVids/RecordedVids';
+import Games from './Components/Games/Games';
+import LiveStream from './Components/LiveStream/LiveStream';
+import Playdates from './Components/Playdates/Playdates';
 import logo from '../src/assets/logo.png';
 
 const App = () => {
@@ -54,6 +57,15 @@ const App = () => {
           </Route>
           <Route path="/videos">
             <RecordedVids />
+          </Route>
+          <Route path="/games">
+            <Games />
+          </Route>
+          <Route path="/stream">
+            <LiveStream />
+          </Route>
+          <Route path="/playdates">
+            <Playdates />
           </Route>
         </Switch>
 

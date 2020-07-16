@@ -43,26 +43,27 @@
     position: relative;
     top: 300px;
     left: -145px;
+    width: 700px;
 }
 
 .filterPanel {
-    position: relative;
-    background-color:#C5FB7F;
+    position: absolute;
+    background-color: #C5FB7F !important;
     position: relative;
     top: 52px;
-    left: -375px;
-    width: 300px;
+    left: -174px;
+    width: 40%;
     height: 1000px;
     overflow: hidden;
 }
 
 .videos {
     display: inline-block;
-    background-color:#FFD583;
+    background-color: #FFD583;
     top: 100px;
-    width: 915px;
+    width: 859px;
     height: 1000px;
-    left: -150px;
+    left: 106px;
     position: absolute;
 }
 
@@ -74,6 +75,11 @@
 
 .bx--accordion__item{
     border: none !important;
+}
+
+.filters {
+    color: black;
+    padding-left: 30px;
 }
 
 .filters:hover {

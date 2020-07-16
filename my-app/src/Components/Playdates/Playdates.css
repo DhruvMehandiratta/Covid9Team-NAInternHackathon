@@ -1,0 +1,67 @@
+.dates-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    margin-top: 8rem;
+}
+
+.dates-text {
+    position: relative;
+    top: 100px;
+    left: -300px;
+    width: 500px;
+    z-index: 1;
+  }  
+
+  .datesContainer {
+    top: -30px;
+    position: relative;
+  }
+
+.dates-text-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom:50px;
+}
+
+.dates-content-container {
+    position: relative;
+    left: 300px;
+    top: -485px;
+    background-color: lightgrey;
+    width: 500px;
+    height: 680px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.dates-class-button {
+    color: white;
+    background-color: #b959ea;
+    position: relative;
+    border-radius: 10px;
+    height: 50px;
+    width: 126px;
+    left: 188px;
+    top: 60px;
+    border: none;
+  }
+
+  .input {
+      width: 300px;
+  }
+
+  .bx--form-item {
+      position: relative;
+      left: 100px;
+      top: 32px;
+  }
+
+  .bx--label {
+      font-size: 1.75rem;
+      color: black;
+      padding: 15px;
+  }
