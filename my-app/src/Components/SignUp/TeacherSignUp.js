@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import image from '../../assets/kids-drawing.png';
 import logo from '../../assets/logo.png'
-import { registerAsTeacher } from '../../../src/service.js';
+import { registerAsTeacher } from '../../server/service.js';
 
 function TeacherSignUp() {
     const [email, setEmail] = useState("");
@@ -44,7 +44,7 @@ function TeacherSignUp() {
                     <label style={{ fontFamily: "Poppins", fontSize: "25px" }}>Password:</label><br /><br />
                     <input onChange={(e) => setPassword(e.target.value)}
                         style={{ fontSize: "25px", borderRadius: "10px", backgroundColor: "Gainsboro", height: "50px", width: "300px", fontFamily: "Poppins" }} type="password" id="teacher_password"></input><br /><br /><br />
-                    <button style={{ fontFamily: "Poppins", fontSize: "15px", marginLeft: "100px", zIndex: "9999", transition: "all 0.2s ease-in 0s", cursor: "pointer", left: "50%", backgroundColor: "#b959ea", height: "50px", width: "100px", borderRadius: "12px" }} type="submit" id="teacher_signup_button">Sign Up</button>
+                    <button style={{ fontFamily: "Poppins", fontSize: "15px", marginLeft: "100px", zIndex: "9999", transition: "all 0.2s ease-in 0s", cursor: "pointer", left: "50%", backgroundColor: "#b959ea", height: "50px", width: "100px", borderRadius: "12px", color: "white" }} type="submit" id="teacher_signup_button">Sign Up</button>
                 </form>
                 <p className="signUpStatus">{signUpStatus}</p>
             </div>

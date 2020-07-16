@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './LoginPage.css';
 import { Container } from 'react-bootstrap';
 import image from '../../assets/kids-drawing.png';
-import { loginAsTeacher, loginAsStudent } from '../../../src/service.js';
+import { loginAsTeacher, loginAsStudent } from '../../server/service.js';
 
-const LandingPage = () => {
+const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState('');
     const [isStudent, setIsStudent] = useState('')
@@ -41,7 +41,7 @@ const LandingPage = () => {
                         <label style={{ fontFamily: "ComicSans", fontSize: "30px" }}>Are you a student?</label>
                         <input onChange={(e) => setIsStudent(e.target.checked)}
                             style={{ marginLeft: "10px", top: "20", fontSize: "10px", borderRadius: "10px", backgroundColor: "Gainsboro", fontFamily: "Poppins", height: "30px", width: "30px" }} type="checkbox" id="login_checkbox"></input><br /><br /><br />
-                        <button style={{ fontFamily: "Poppins", fontSize: "15px", marginLeft: "50px", zIndex: "9999", transition: "all 0.2s ease-in 0s", cursor: "pointer", backgroundColor: "#b959ea", height: "50px", width: "180px", borderRadius: "12px" }} type="submit" id="login_button">Login</button>
+                        <button style={{ fontFamily: "Poppins", fontSize: "15px", marginLeft: "50px", zIndex: "9999", transition: "all 0.2s ease-in 0s", cursor: "pointer", backgroundColor: "#b959ea", height: "50px", width: "180px", borderRadius: "12px", color: "white" }} type="submit" id="login_button">Login</button>
 
                     </form>
                     <p className="loginStatus">{loginStatus}</p>
@@ -52,5 +52,5 @@ const LandingPage = () => {
     );
 }
 
-export default LandingPage;
+export default LoginPage;
 

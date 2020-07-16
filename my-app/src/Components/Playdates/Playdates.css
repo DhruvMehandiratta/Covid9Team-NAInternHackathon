@@ -39,15 +39,15 @@
 }
 
 .dates-class-button {
-    color: white;
-    background-color: #b959ea;
-    position: relative;
-    border-radius: 10px;
-    height: 50px;
-    width: 126px;
-    left: 188px;
-    top: 60px;
-    border: none;
+  color: white;
+  background-color: #b959ea;
+  position: relative;
+  border-radius: 10px;
+  height: 50px;
+  width: 126px;
+  left: 103px;
+  top: 35px;
+  border: none;
   }
 
   .dates-class-button:hover {
@@ -59,7 +59,17 @@
     border: none;
   }
 
+  .inputLabel {
+    font-family: "Poppins";
+    font-size: 25px;
+  }
+
   .input {
+      font-family: "Poppins";
+      font-size: 25px;
+      border-radius: 10px;
+      background-color: "Gainsboro";
+      height: 50px;
       width: 300px;
   }
 
@@ -74,3 +84,10 @@
       color: black;
       padding: 15px;
   }
+
+  .contentContainer {
+    position: relative;
+    left: 100px;
+    top: 37px;
+  }
+  

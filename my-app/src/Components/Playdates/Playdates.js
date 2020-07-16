@@ -19,34 +19,40 @@ class Playdates extends React.Component {
                 </h1>
                     </div>
                     <div className="dates-content-container">
-                        <TextInput
-                        id="name"
-                        labelText="Name:"
-                        className="input"
-                        />
-                        <TextInput
-                        id="day"
-                        labelText="Day of the Week:"
-                        className="input"
-                        />
-                        <TextInput
-                        id="time"
-                        labelText="Time:"
-                        className="input"
-                        />
-                        <TextArea
-                        id="interests"
-                        labelText="Interests:"
-                        className="input"
-                        />
-                        <TextInput
-                        id="email"
-                        labelText="Email:"
-                        className="input"
-                        />
-                        <Button className="dates-class-button" href="/learn">
-                        Sign Up
+                        <div className="contentContainer">                    <label className="inputLabel">Name:</label>
+                            <br />
+                            <br />
+                            <input className="input" type="text" id="name"></input>
+                            <br />
+                            <br />
+                            <label className="inputLabel">Day:</label>
+                            <br />
+                            <br />
+                            <input className="input" type="text" id="day"></input>
+                            <br />
+                            <br />
+                            <label className="inputLabel">Time:</label>
+                            <br />
+                            <br />
+                            <input className="input" type="text" id="time"></input>
+                            <br />
+                            <br />
+                            <label className="inputLabel">Interests:</label>
+                            <br />
+                            <br />
+                            <input className="input" type="text" id="interests"></input>
+                            <br />
+                            <br />
+                            <label className="inputLabel">Email:</label>
+                            <br />
+                            <br />
+                            <input className="input" type="text" id="email"></input>
+                            <br />
+                            <br />
+                            <Button className="dates-class-button" href="/learn">
+                                Sign Up
                         </Button>
+                        </div>
                     </div>
                 </div>
             </Container>
