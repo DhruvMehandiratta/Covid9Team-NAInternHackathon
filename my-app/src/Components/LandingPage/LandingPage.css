@@ -23,6 +23,7 @@
     font-size: calc(10px + 2vmin);
     color: black;
     text-align: right;
+    position: relative;
   }
   
   .class-button {
@@ -34,23 +35,38 @@
     width: 100px;
     left: 800px;
     top: -20px;
+    border: none;
+  }
+
+  .class-button:hover {
+    background-color: #af26f5;
+  }
+
+  .class-button:active {
+    background-color: #af26f5;
+    border: none;
   }
   
   .main-title {
     position: relative;
     top: 200px;
     left: 200px;
+    font-size: 45px;
+    z-index: 1;
   }
   
   .main-text {
     position: relative;
     top: 200px;
     left: 200px;
+    font-size: 20px;
+    z-index: 1;
   }
   
   .main-image {
-    width: 500px;
+    width: 800px;
     position: relative;
-    top: -50px;
-    left: 200px;
+    top: 0px;
+    left: 250px;
+    z-index: 1;
   }

@@ -9,7 +9,6 @@
     left: -400px;
   }
 
-  
   .class-button {
     color: white;
     background-color: #b959ea;
@@ -21,13 +20,12 @@
     top: -20px;
   }
   
-
   .main-text {
     position: relative;
     top: 200px;
     left: 200px;
   }
-  
+
   .main-image {
     width: 500px;
     position: relative;

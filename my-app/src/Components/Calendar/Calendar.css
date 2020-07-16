@@ -1,0 +1,28 @@
+.calendar-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    margin-top: 8rem;
+}
+
+.calendar-text {
+    position: relative;
+    top: 100px;
+    left: -300px;
+    width: 400px;
+  }  
+
+  .calendarContainer {
+    top: -30px;
+    position: relative;
+  }
+
+.calendar-text-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom:50px;
+    z-index: 1;
+}

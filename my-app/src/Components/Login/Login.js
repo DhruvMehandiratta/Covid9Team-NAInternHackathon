@@ -1,5 +1,4 @@
-import React from 'react';
-import './LearnMore.css';
+import './Login.css';
 import { Container } from 'react-bootstrap';
 import classroom from '../../assets/liveClassroom.jpg';
 import playdates from '../../assets/playdate.png';
@@ -18,20 +17,18 @@ class Learn extends React.Component {
 					</div>
 					<div className="content-container">
 						<div className="content-container1">
-							<img className="classroom" alt="classroom" src={classroom} />
-							<a className="classroomButton" href="/calendar">Live Classrooms</a>
+							<img className="classroom" alt="empty" src={classroom} />
+							<button className="classroomButton">Live Classrooms</button>
 
-							<img className="playdates" alt="playdates" src={playdates} />
-							<a className="playdatesButton" href="/playdates">Online Playdates</a>
-
-							
+							<img className="playdates" alt="empty" src={playdates} />
+							<button className="playdatesButton">Online Playdates</button>
 						</div>
 						<div className="content-container2">
-							<img className="vids" alt="videos" src={vids} />
-							<a className="vidsButton" href="/videos">Educational Videos</a>
+							<img className="vids" alt="empty" src={vids} />
+							<button className="vidsButton">Educational Videos</button>
 
-							<img className="games" alt="games" src={games} />
-							<a className="gamesButton" href="/games">Games</a>
+							<img className="games" alt="empty" src={games} />
+							<button className="gamesButton">Games</button>
 						</div>
 					</div>
 				</div>

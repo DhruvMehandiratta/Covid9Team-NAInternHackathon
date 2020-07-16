@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import Calendar from './Components/Calendar/Calendar'
+import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -13,25 +14,24 @@ import EventSignUp from './Components/SignUp/EventSignUp'
 import LoginPage from './Components/LoginPage/LoginPage'
 import StudentsSignUp from './Components/SignUp/StudentsSignUp'
 import TeacherSignUp from './Components/SignUp/TeacherSignUp'
+import RecordedVids from './Components/RecordedVids/RecordedVids';
+import logo from '../src/assets/logo.png';
 
 
 
  const App = () => {
    return (
-
     <Router>
       <div className="main-container">
         <Container>
           <Navbar bg="transparent" expant="lg">
-            <Navbar.Brand href="/home">Home School</Navbar.Brand>
+            <img className="logo" alt="empty" src={logo} />
+            <Navbar.Brand href="/home">VirtualEdu</Navbar.Brand>
             <Navbar.Toggle aria-controls="home-school-navbar"></Navbar.Toggle>
             <Navbar.Collapse className="home-navbar" id="home-school-navbar">
               <Nav>
                 <Nav.Link href="/home">
                   Home
-                </Nav.Link>
-                <Nav.Link>
-                  Sign Up
                 </Nav.Link>
                 <Nav.Link href="/learn">
                   Learn More
@@ -39,6 +39,10 @@ import TeacherSignUp from './Components/SignUp/TeacherSignUp'
                 <Nav.Link href="/loginpage">
                   Login
                 </Nav.Link>
+                <NavDropdown title="Sign Up" renderMenuOnMount={true}>
+                    <NavDropdown.Item href="/teacher/signup">Teacher</NavDropdown.Item>
+                    <NavDropdown.Item href="/parent/signup">Parent</NavDropdown.Item>
+                  </NavDropdown>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -63,8 +67,17 @@ import TeacherSignUp from './Components/SignUp/TeacherSignUp'
           <Route path="/eventsSignUp">
             <EventSignUp/>
           </Route>
-
+          <Route path="/calendar">
+            <Calendar />
+          </Route>
+          <Route path="/videos">
+            <RecordedVids />
+          </Route>
         </Switch>
+
+        <div class="home-page-circle-1"></div>
+        <div class="home-page-circle-2"></div>
+        <div class="home-page-circle-3"></div>
       </div>
     </Router>
   );
