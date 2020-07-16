@@ -1,0 +1,86 @@
+.teacherContainer {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+}
+
+.teacherText {
+    margin-left: 200px;
+    margin-top: 300px;
+    font-family: "Poppins";
+    font-size: 35px;
+}
+
+.teacherImg1 {
+    width: 700px;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.teacherImg2 {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.teacherContainer2 {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    right: 0px;
+    width: 50%;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.teacherLabel {
+    font-family: "Poppins";
+    font-size: 25px;
+    position: relative;
+    top: 35px;
+    left: 62px;
+}
+
+.teacherInput {
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: "Gainsboro";
+    height: 50px;
+    width: 300px;
+    font-family: "Poppins";
+    position: relative;
+    left: 66px;
+    top: 30px;
+}
+
+.teacherButton {
+    font-size: 15px;
+    margin-left: 50px;
+    z-index: 1;
+    transition: "all 0.2s ease-in 0s";
+     cursor: "pointer";
+      background-color: #b959ea;
+      height: 50px; 
+      width: 100px;
+      border-radius: 12px;
+      color: white;
+      position: relative;
+      top: 30px;
+      left: 120px;
+}
+
+.teacherForm {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    height: 537px;
+    width: 447px;
+}

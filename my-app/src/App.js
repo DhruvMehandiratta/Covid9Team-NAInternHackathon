@@ -1,5 +1,4 @@
 import React from "react";
-// import { loginAsTeacher } from "./server/service";
 import './App.css';
 import LearnMore from './Components/LearnMore/LearnMore';
 import Calendar from './Components/Calendar/Calendar'
@@ -11,13 +10,12 @@ import {
   Route
 } from "react-router-dom";
 import LandingPage from './Components/LandingPage/LandingPage';
-import EventSignUp from './Components/SignUp/EventSignUp'
 import LoginPage from './Components/LoginPage/LoginPage'
 import StudentsSignUp from './Components/SignUp/StudentsSignUp'
 import TeacherSignUp from './Components/SignUp/TeacherSignUp'
+import EventSignUp from './Components/SignUp/EventSignUp'
 import RecordedVids from './Components/RecordedVids/RecordedVids';
 import Games from './Components/Games/Games';
-import LiveStream from './Components/LiveStream/LiveStream';
 import Playdates from './Components/Playdates/Playdates';
 import logo from '../src/assets/logo.png';
 
@@ -79,11 +77,11 @@ const App = () => {
           <Route path="/games">
             <Games />
           </Route>
-          <Route path="/stream">
-            <LiveStream />
-          </Route>
           <Route path="/playdates">
             <Playdates />
+          </Route>
+          <Route path="/event">
+            <EventSignUp />
           </Route>
         </Switch>
 
